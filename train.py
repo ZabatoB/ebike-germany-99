@@ -150,13 +150,16 @@ def send_notification(score: float, top_deals: list):
         body = "\n".join(lines)
 
     try:
+        # ntfy headers must be ASCII-safe; encode body as UTF-8
+        safe_title = f"E-Bike Alert - Score {score:.2f}".encode("ascii", "ignore").decode()
         resp = requests.post(
             NTFY_URL,
             data=body.encode("utf-8"),
             headers={
-                "Title": f"E-Bike Alert – Score {score:.2f}",
+                "Title": safe_title,
                 "Priority": "high",
                 "Tags": "bike,deal,germany",
+                "Content-Type": "text/plain; charset=utf-8",
             },
             timeout=10,
         )
