@@ -1,52 +1,572 @@
 [
   {
-    "source": "Kleinanzeigen",
-    "title": "SUCHE | E-Bike Bosch Akku PowerPack 300 400 500 defekt!",
-    "price_eur": 45.0,
-    "motor": "Bosch",
-    "condition": "used",
-    "location": "10623 Charlottenburg",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/suche-e-bike-bosch-akku-powerpack-300-400-500-defekt-/3360147598-217-3340",
-    "description": "Hallo Leute, ich benötige Bosch PowerPacks als Ersatzteilspender.\n\nhier mal die aktuelle Ankauf -..."
+    "source": "RABE",
+    "title": "Focus JamÂ² SL 8.8",
+    "price_eur": 2.799,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/focus-jam-sl-8-8-limeyellow-carbon-raw-2023?childsku=63096",
+    "description": "RABE Sale – Focus JamÂ² SL 8.8"
   },
   {
-    "source": "Kleinanzeigen",
-    "title": "Suche E-Bikes (auch defekt) – Bosch Motor bevorzugt",
-    "price_eur": 10.0,
-    "motor": "Bosch",
-    "condition": "used",
-    "location": "88348 Bad Saulgau",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/suche-e-bikes-auch-defekt-bosch-motor-bevorzugt/3359304820-217-8728",
-    "description": "Ich kaufe Elektrofahrräder, vorzugsweise mit Bosch-Motor.\n\nAuch defekte E-Bikes oder Fahrräder mit..."
+    "source": "RABE",
+    "title": "Trek Madone SL 5 Gen 8",
+    "price_eur": 1.899,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/trek-madone-sl-5-gen-8-matte-deep-smoke-2025?childsku=72381",
+    "description": "RABE Sale – Trek Madone SL 5 Gen 8"
   },
   {
-    "source": "Kleinanzeigen",
-    "title": "SUCHE E-Bike Bosch Defekt Performance Herren Uni-sex 27,5“ 28“",
-    "price_eur": 400.0,
-    "motor": "Bosch",
-    "condition": "used",
-    "location": "42781 Haan",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/suche-e-bike-bosch-defekt-performance-herren-uni-sex-27-5-28-/3347305489-217-1516",
-    "description": "Hallo!\nIch suche auf diesem Weg ein E-Bike mit Antrieb von Bosch.\nAm liebsten ein Herren- oder..."
+    "source": "RABE",
+    "title": "Focus JamÂ² SL 8.8",
+    "price_eur": 2.999,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/focus-jam-sl-8-8-lightgrey-carbon-raw-2023?childsku=63092",
+    "description": "RABE Sale – Focus JamÂ² SL 8.8"
   },
   {
-    "source": "Kleinanzeigen",
-    "title": "Suche E Bike Bosch Nyon 1 oder 2",
-    "price_eur": 150.0,
-    "motor": "Bosch",
-    "condition": "used",
-    "location": "68753 Waghäusel",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/suche-e-bike-bosch-nyon-1-oder-2/3283971131-230-8337",
-    "description": "Hallo zusammen,\nich suche Bosch Nyon 1 oder 2 komplett."
+    "source": "RABE",
+    "title": "Trek Checkpoint SL 6 AXS Gen 3",
+    "price_eur": 2.699,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/trek-checkpoint-sl-6-axs-gen-3-matte-hex-marianas-blue-2025?childsku=79476",
+    "description": "RABE Sale – Trek Checkpoint SL 6 AXS Gen 3"
   },
   {
-    "source": "Kleinanzeigen",
-    "title": "Suche E-Bike Unfallrad mit Bosch Motor",
-    "price_eur": 1.0,
+    "source": "RABE",
+    "title": "Cannondale Moterra 2",
+    "price_eur": 4.999,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/cannondale-moterra-2-matte-black-2025?childsku=76484",
+    "description": "RABE Sale – Cannondale Moterra 2"
+  },
+  {
+    "source": "RABE",
+    "title": "Focus Izalco Max 9.7",
+    "price_eur": 2.999,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/focus-izalco-max-9-7-heritage-blue-stone-blue-2024?childsku=79560",
+    "description": "RABE Sale – Focus Izalco Max 9.7"
+  },
+  {
+    "source": "RABE",
+    "title": "Cannondale Moterra 2",
+    "price_eur": 4.999,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/cannondale-moterra-carbon-2-jade-2025?childsku=76489",
+    "description": "RABE Sale – Cannondale Moterra 2"
+  },
+  {
+    "source": "RABE",
+    "title": "Focus VamÂ² SL 9.9",
+    "price_eur": 3.799,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/focus-vam-sl-9-9-carbon-raw-2024?childsku=68569",
+    "description": "RABE Sale – Focus VamÂ² SL 9.9"
+  },
+  {
+    "source": "RABE",
+    "title": "Kalkhoff Entice 5+ Excite ABS",
+    "price_eur": 4.399,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/kalkhoff-entice-5-excite-abs-moonstone-grey-2026?childsku=81876",
+    "description": "RABE Sale – Kalkhoff Entice 5+ Excite ABS"
+  },
+  {
+    "source": "RABE",
+    "title": "2nd Choice - CUBE Stereo Hybrid ONE44 Pro 800",
+    "price_eur": 3.199,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/2-wahl-cube-stereo-hybrid-one44-pro-800-shiftblush-n-raisin-2026?childsku=84126",
+    "description": "RABE Sale – 2nd Choice - CUBE Stereo Hybrid ONE44 Pro 800"
+  },
+  {
+    "source": "RABE",
+    "title": "Cannondale Scalpel HT Carbon 3",
+    "price_eur": 1.619,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/cannondale-scalpel-ht-carbon-3-ion-blue-2026?childsku=82537",
+    "description": "RABE Sale – Cannondale Scalpel HT Carbon 3"
+  },
+  {
+    "source": "RABE",
+    "title": "2nd Choice - CUBE Kathmandu Hybrid Pro 800 Easy Entry",
+    "price_eur": 2.999,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/2-wahl-cube-kathmandu-hybrid-pro-800-sunglow-n-chrome-2026-easy-entry?childsku=84135",
+    "description": "RABE Sale – 2nd Choice - CUBE Kathmandu Hybrid Pro 800 Easy Entry"
+  },
+  {
+    "source": "RABE",
+    "title": "2nd Choice - Elite Justo 2",
+    "price_eur": 699.0,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/2-wahl-elite-justo-2",
+    "description": "RABE Sale – 2nd Choice - Elite Justo 2"
+  },
+  {
+    "source": "RABE",
+    "title": "Haibike Lyke CF 10",
+    "price_eur": 3.499,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/haibike-lyke-cf-10-carbon-silver-2025?childsku=82437",
+    "description": "RABE Sale – Haibike Lyke CF 10"
+  },
+  {
+    "source": "RABE",
+    "title": "CUBE Litening AIR C:68X Frameset",
+    "price_eur": 1.999,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/cube-litening-air-c-68x-frameset-team-replica-2025?childsku=82640",
+    "description": "RABE Sale – CUBE Litening AIR C:68X Frameset"
+  },
+  {
+    "source": "RABE",
+    "title": "2nd Choice - Cannondale Synapse Carbon 3 SmartSense",
+    "price_eur": 3.399,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/2-wahl-cannondale-synapse-carbon-3-smartsense-stvzo-cashmere-2026?childsku=84039",
+    "description": "RABE Sale – 2nd Choice - Cannondale Synapse Carbon 3 SmartSense"
+  },
+  {
+    "source": "RABE",
+    "title": "2nd Choice - CUBE Kathmandu Hybrid Pro 800 Easy Entry",
+    "price_eur": 2.999,
+    "motor": "Unknown",
+    "condition": "refurbished",
+    "location": "DE",
+    "url": "https://www.rabe-bike.de/en/2-wahl-cube-kathmandu-hybrid-pro-800-sunglow-n-chrome-2026?childsku=84121",
+    "description": "RABE Sale – 2nd Choice - CUBE Kathmandu Hybrid Pro 800 Easy Entry"
+  },
+  {
+    "source": "Airtracks",
+    "title": "29 Zoll Herren E-BIKE SUV MTB MAVERIX BOSCH Performance Line CX 500Wh BOOST 85Nm 12 x GANG SHIMANO DEORE RD-6100",
+    "price_eur": 2499.0,
     "motor": "Bosch",
-    "condition": "used",
-    "location": "59067 Hamm",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/suche-e-bike-unfallrad-mit-bosch-motor/3190907748-217-2025",
-    "description": "suche defekte ebike oder unfallrad mit Bosch Mittel-Motoren."
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/29-zoll-e-mtb-suv-maverix-bosch-performance-line-cx-gen4-500wh-boost-85nm-12s-shimano-deore-rd-6100",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 29 Zoll Herren E-BIKE SUV MTB MAVERIX BOSCH Performance Line CX 500Wh BOOST 85Nm 12 x GANG SHIMANO D"
+  },
+  {
+    "source": "Airtracks",
+    "title": "29 Zoll Herren E-Bike SUV MTB MOTIV SR 2.0 Bosch Performance Line CX 625 Wh 9 x GANG SHIMANO RD-M2000 SGS",
+    "price_eur": 2399.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/29-zoll-herren-e-bike-mtb-suv-mountainbike-bosch-performance-line-cx-gen4-625-wh-motiv-sr-2-0-9-gang",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 29 Zoll Herren E-Bike SUV MTB MOTIV SR 2.0 Bosch Performance Line CX 625 Wh 9 x GANG SHIMANO RD-M200"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Herren E-Bike City Fahrrad NOVA CITY BOSCH PERFORMANCE LINE 625Wh 5 GANG SHIMANO NEXUS INTER",
+    "price_eur": 2399.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-city-fahrrad-nova-city-bosch-performance-line-625wh-5-gang-shimano-nexus-inter",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike City Fahrrad NOVA CITY BOSCH PERFORMANCE LINE 625Wh 5 GANG SHIMANO NEXUS INTER"
+  },
+  {
+    "source": "Airtracks",
+    "title": "27,5 E-MTB Mountainbike BOSCH Performance Line CX 625 Wh MAVERIX 10 x GANG SHIMANO DEORE  RD-M5120 SGS",
+    "price_eur": 2399.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/29-zoll-e-bike-mtb-bosch-performance-line-cx-625-wh-maverix-10-x-gang-shimano-deore-rd-m5120-sgs",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 27,5 E-MTB Mountainbike BOSCH Performance Line CX 625 Wh MAVERIX 10 x GANG SHIMANO DEORE  RD-M5120 S"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Herren E-Bike Trekking Fahrrad MOTIV TR.2.0 BOSCH PERFORMANCE LINE 625 Wh 9s SHIMANO ALTUS",
+    "price_eur": 2299.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-motiv-tr-2-0-bosch-performance-line-625wh-9s-shimano-altus",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad MOTIV TR.2.0 BOSCH PERFORMANCE LINE 625 Wh 9s SHIMANO ALTUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Damen E-Bike LS Trekking Fahrrad LUMINA BOSCH ACTIVE PLUS LINE 500 Wh 8s SHIMANO NEXUS",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-ls-trekking-fahrrad-lumina-bosch-active-plus-line-gen3-500-wh-8s-shimano-nexus",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike LS Trekking Fahrrad LUMINA BOSCH ACTIVE PLUS LINE 500 Wh 8s SHIMANO NEXUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "27,5\" E-Bike SUV Trekking Fahrrad LS Wave eAdventure 12.5 City Bike SHIMANO STEPS E 7000 630 Wh 10s SHIMANO DEORE RD-M5130 SGS",
+    "price_eur": 2199.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/27-5-zoll-damen-e-suv-fahrrad-e-bike-tiefeinsteiger-ls-eadventure-12-5-wave-shimano-steps-e-700-630-wh-deore-m5130-10-gang",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 27,5\" E-Bike SUV Trekking Fahrrad LS Wave eAdventure 12.5 City Bike SHIMANO STEPS E 7000 630 Wh 10s "
+  },
+  {
+    "source": "Airtracks",
+    "title": "27,5 Zoll E-Bike MTB Mountainbike RAZOR SHIMANO STEPS EP800 500 Wh BOOST 85Nm 11s SHIMANO XT M8000",
+    "price_eur": 2199.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/27-5-zoll-e-bike-mtb-mountainbike-razor-shimano-steps-ep800-500-wh-boost-85nm-11s-shimano-xt-m8000",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 27,5 Zoll E-Bike MTB Mountainbike RAZOR SHIMANO STEPS EP800 500 Wh BOOST 85Nm 11s SHIMANO XT M8000"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Herren E-Bike Trekking Fahrrad NOVA BOSCH PERFORMANCE LINE 500Wh 10s Shimano DEORE RD-T6000",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-nova-bosch-performance-line-500wh-10s-shimano-deore-rd-t6000",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad NOVA BOSCH PERFORMANCE LINE 500Wh 10s Shimano DEORE RD-T6000"
+  },
+  {
+    "source": "Airtracks",
+    "title": "27,5 Zoll E-Bike Damen SUV Mountainbike X3 SHIMANO STEPS EP800 504Wh BOOST 85Nm 10s SHIMANO RD-M5130",
+    "price_eur": 2199.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/27-5-zoll-e-bike-damen-suv-mountainbike-x3-shimano-steps-ep800-504wh-boost-85nm-10s-shimano-rd-m5130",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 27,5 Zoll E-Bike Damen SUV Mountainbike X3 SHIMANO STEPS EP800 504Wh BOOST 85Nm 10s SHIMANO RD-M5130"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Herren E-Bike Trekking Fahrrad LUMINA GX 3 BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT RD-T8000 SGS",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-heren-e-bike-lumina-gx-3-bosch-performance-line-powerpack-500-wh-shimano-xt-t-8000",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad LUMINA GX 3 BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT RD-"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28 Zoll Damen E-Bike LS CITY Fahrrad e-TOURING 11.9 City Bike SHIMANO STEPS E 6100 630 Wh 5 x GANG GATES CARBON BELT SHIMANO NEXUS INTER 5",
+    "price_eur": 2199.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-ls-city-fahrrad-e-touring-11-9-city-bike-shimano-steps-e-6100-630-wh-5-x-gang-shimano-nexus-inter-5",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll Damen E-Bike LS CITY Fahrrad e-TOURING 11.9 City Bike SHIMANO STEPS E 6100 630 Wh 5 x GANG G"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike Damen Trekking Fahrrad LUMINA GX3 LS BOSCH ACTIVE PLUS LINE 500 Wh 9 x GANG SHIMANO ALIVIO RD-M3100",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-trekking-fahrrad-lumina-gx3-bosch-active-plus-line-gen3-500-wh-9s-shimano-alivio-kopie",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Damen Trekking Fahrrad LUMINA GX3 LS BOSCH ACTIVE PLUS LINE 500 Wh 9 x GANG SHIMANO ALIVI"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28 Zoll Damen E-Bike LS City Fahrrad MOTIVE TF 1.7 Trekking Bike BOSCH ACTIVE PLUS LINE 400 Wh 7s SHIMANO NEXUS",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/motive-tf-1-7-wave",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll Damen E-Bike LS City Fahrrad MOTIVE TF 1.7 Trekking Bike BOSCH ACTIVE PLUS LINE 400 Wh 7s SH"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Damen E-Bike Trekking Fahrrad MOTIV TR.2.0L BOSCH PERFORMANCE LINE 500 Wh 9s SHIMANO ALTUS",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-trekking-fahrrad-motiv-tr-2-0l-bosch-performance-line-500-wh-9s-shimano-altus",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike Trekking Fahrrad MOTIV TR.2.0L BOSCH PERFORMANCE LINE 500 Wh 9s SHIMANO ALTUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Herren E-Bike Trekking Fahrrad MOTIV TR.2.0 BOSCH PERFORMANCE LINE 500 Wh 9s SHIMANO ALTUS",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-motiv-tr-2-0-bosch-performance-line-500-wh-9s-shimano-altus",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad MOTIV TR.2.0 BOSCH PERFORMANCE LINE 500 Wh 9s SHIMANO ALTUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28 Zoll E-Bike LS Wave CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS",
+    "price_eur": 2190.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-ls-wave-city-fahrrad-nova-shimano-stieps-e6100-504wh-8-x-gang-shimano-nexus",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll E-Bike LS Wave CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Damen E-Bike Trekking Fahrrad LUMINA GX3  BOSCH ACTIVE PLUS LINE 500 Wh 9s SHIMANO ALIVIO RD T-4000",
+    "price_eur": 2149.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-lumina-gx-3-bosch-performance-line-powerpack-500-wh-shimano-xt-t-8000",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike Trekking Fahrrad LUMINA GX3  BOSCH ACTIVE PLUS LINE 500 Wh 9s SHIMANO ALIVIO RD T-4"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Herren E-Bike Trekking Fahrrad LUMINA BOSCH PERFORMANCE LINE CX 500Wh 9s SHIMANO ALIVIO",
+    "price_eur": 2099.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-lumina-bosch-performance-line-cx-gen4-500wh-9s-shimano-alivio",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad LUMINA BOSCH PERFORMANCE LINE CX 500Wh 9s SHIMANO ALIVIO"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28 Zoll Damen E-Bike CITY Fahrrad e-TOURING 11.7 City Bike SHIMANO STEPS E 6100 504 Wh 5 x GANG SHIMANO NEXUS INTER 5",
+    "price_eur": 2099.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-city-fahrrad-e-touring-11-7-city-bike-shimano-steps-e-6100-504-wh-5-x-gang-shimano-nexus-inter-5",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll Damen E-Bike CITY Fahrrad e-TOURING 11.7 City Bike SHIMANO STEPS E 6100 504 Wh 5 x GANG SHIM"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Herren E-Bike Trekking Fahrrad LUMINA BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT",
+    "price_eur": 2099.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-lumina-bosch-performance-line-gen3-500wh-10s-shimano-deore-xt",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad LUMINA BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28 Zoll Damen E-Bike LS CITY Fahrrad e-TOURING 11.7 City Bike SHIMANO STEPS E 6100 504 Wh 5 x GANG SHIMANO NEXUS INTER 5",
+    "price_eur": 2099.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/etouring-11-7-gent",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll Damen E-Bike LS CITY Fahrrad e-TOURING 11.7 City Bike SHIMANO STEPS E 6100 504 Wh 5 x GANG S"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike Herren CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS",
+    "price_eur": 1999.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-herren-city-fahrrad-nova-shimano-stieps-e6100-504wh-8-x-gang-shimano-nexus",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike Damen CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS",
+    "price_eur": 1999.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-damen-city-fahrrad-nova-shimano-stieps-e6100-504wh-8-x-gang-shimano-nexus",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Damen CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Damen E-Bike LS Trekking Fahrrad e-TOURING 12.8 City Bike SHIMANO STEPS E 7000 504 Wh 10s SHIMANO DEORE RD-M5130 SGS",
+    "price_eur": 1849.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-tiefeinsteiger-ls-etouring-12-8-wave-shimano-steps-e-7000-504-wh-deore-rd-m5130-10-gang",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike LS Trekking Fahrrad e-TOURING 12.8 City Bike SHIMANO STEPS E 7000 504 Wh 10s SHIMAN"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Trekking Fahrrad E-Bike V-Tron LS Rack BOSCH ACTIVE LINE 400 Wh 7 GANG SHIMANO NEXUS",
+    "price_eur": 1799.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-trekking-fahrrad-e-bike-v-tron-ls-rack-bosch-active-plus-line-gen3-400-wh-7-gang-shimano-nex",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Trekking Fahrrad E-Bike V-Tron LS Rack BOSCH ACTIVE LINE 400 Wh 7 GANG SHIMANO NEXUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28 Zoll City Fahrrad E-Bike V-Tron CR LS RACK BOSCH ACTIVE LINE Gen3 400 Wh 7 GANG SHIMANO NEXUS",
+    "price_eur": 1749.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/v-tron-wave-1",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll City Fahrrad E-Bike V-Tron CR LS RACK BOSCH ACTIVE LINE Gen3 400 Wh 7 GANG SHIMANO NEXUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike City Fahrrad V-Tron RACK BOSCH ACTIVE LINE PLUS 400 Wh 7s SHIMANO NEXUS RÜCKTRITTBREMSE",
+    "price_eur": 1699.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-city-fahrrad-e-bike-v-tron-cr-ls-rack-bosch-active-plus-line-gen3-400-wh-7-gang-shimano-nexus-kopie",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike City Fahrrad V-Tron RACK BOSCH ACTIVE LINE PLUS 400 Wh 7s SHIMANO NEXUS RÜCKTRITTBREMSE"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike Damen City Fahrrad X-Tron SR2 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER 5",
+    "price_eur": 1699.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-damen-city-fahrrad-x-tron-sr2-shimano-stieps-e5000-418wh-5-gang-shimano-nexus-inter-5",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Damen City Fahrrad X-Tron SR2 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER 5"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike Herren Trekking Fahrrad X-Tron SR1 SHIMANO STEPS E-6100 504Wh 9 GANG SHIMANO ALIVIO",
+    "price_eur": 1699.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-herren-trekking-fahrrad-x-tron-sr1-shimano-stieps-e6100-504wh-9-gang-shimano-alivio",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren Trekking Fahrrad X-Tron SR1 SHIMANO STEPS E-6100 504Wh 9 GANG SHIMANO ALIVIO"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike Herren City Fahrrad X-Tron SR2 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER 5",
+    "price_eur": 1699.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-herren-city-fahrrad-x-tron-sr2-shimano-stieps-e5000-418wh-5-gang-shimano-nexus-inter-5",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren City Fahrrad X-Tron SR2 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER 5"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Damen E-Bike SHIMANO STEPS E-5000 City LS Fahrrad Wave Citybike 7 x Gang SHIMANO NEXUS",
+    "price_eur": 1549.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-shimano-steps-e5000-city-ls-fahrrad-wave-citybike-7-x-gang-shimano-nexus",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike SHIMANO STEPS E-5000 City LS Fahrrad Wave Citybike 7 x Gang SHIMANO NEXUS"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28 Zoll E-Bike City Fahrrad LS WAVE SR3 CR SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER",
+    "price_eur": 1499.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-city-fahrrad-creon-ls-wave-x-tron-sr3-shimano-st%D0%B5ps-e-5000-418wh-5-gang-shimano-nexus-inter-kopie",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll E-Bike City Fahrrad LS WAVE SR3 CR SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike Herren City Fahrrad X-Tron SR3 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER",
+    "price_eur": 1499.0,
+    "motor": "Shimano",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-xtron-sr3-shimano-steps-e-5000-418-wh-nexus-inter-5-gang",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren City Fahrrad X-Tron SR3 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike Herren Urban Bike STREET Citybike BAFANG 350WH GATES CARBON BELT SINGLE SPEED",
+    "price_eur": 1199.0,
+    "motor": "Unknown",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/29-zoll-e-bike-mtb-mountainbike-quantum-steps-e7000-504wh-10-x-gang-shimano-deore-rd-m5120-sgs-kopie",
+    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren Urban Bike STREET Citybike BAFANG 350WH GATES CARBON BELT SINGLE SPEED"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Herren E-Bike Trekking Fahrrad LUMINA GX 3 BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT RD-T8000 SGS",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/28-zoll-heren-e-bike-lumina-gx-3-bosch-performance-line-powerpack-500-wh-shimano-xt-t-8000",
+    "description": "e-bikes-fahrrader-sale – 28\" Herren E-Bike Trekking Fahrrad LUMINA GX 3 BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT RD-"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" E-Bike City Fahrrad V-Tron RACK BOSCH ACTIVE LINE PLUS 400 Wh 7s SHIMANO NEXUS RÜCKTRITTBREMSE",
+    "price_eur": 1699.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/28-zoll-city-fahrrad-e-bike-v-tron-cr-ls-rack-bosch-active-plus-line-gen3-400-wh-7-gang-shimano-nexus-kopie",
+    "description": "e-bikes-fahrrader-sale – 28\" E-Bike City Fahrrad V-Tron RACK BOSCH ACTIVE LINE PLUS 400 Wh 7s SHIMANO NEXUS RÜCKTRITTBREMSE"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Damen E-Bike Trekking Fahrrad LUMINA GX3  BOSCH ACTIVE PLUS LINE 500 Wh 9s SHIMANO ALIVIO RD T-4000",
+    "price_eur": 2149.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/28-zoll-damen-e-bike-lumina-gx-3-bosch-performance-line-powerpack-500-wh-shimano-xt-t-8000",
+    "description": "e-bikes-fahrrader-sale – 28\" Damen E-Bike Trekking Fahrrad LUMINA GX3  BOSCH ACTIVE PLUS LINE 500 Wh 9s SHIMANO ALIVIO RD T-4"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28 Zoll Damen E-Bike LS City Fahrrad MOTIVE TF 1.7 Trekking Bike BOSCH ACTIVE PLUS LINE 400 Wh 7s SHIMANO NEXUS",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/motive-tf-1-7-wave",
+    "description": "e-bikes-fahrrader-sale – 28 Zoll Damen E-Bike LS City Fahrrad MOTIVE TF 1.7 Trekking Bike BOSCH ACTIVE PLUS LINE 400 Wh 7s SH"
+  },
+  {
+    "source": "Airtracks",
+    "title": "28\" Damen E-Bike LS Trekking Fahrrad LUMINA BOSCH ACTIVE PLUS LINE 500 Wh 8s SHIMANO NEXUS",
+    "price_eur": 2199.0,
+    "motor": "Bosch",
+    "condition": "new",
+    "location": "DE",
+    "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/28-zoll-damen-e-bike-ls-trekking-fahrrad-lumina-bosch-active-plus-line-gen3-500-wh-8s-shimano-nexus",
+    "description": "e-bikes-fahrrader-sale – 28\" Damen E-Bike LS Trekking Fahrrad LUMINA BOSCH ACTIVE PLUS LINE 500 Wh 8s SHIMANO NEXUS"
   }
 ]

@@ -1,26 +1,26 @@
 """
 E-Bike deal scraper + optimization loop.
 
-Pipeline:
-  1. Read current best score from results.tsv (baseline = 0).
-  2. Scrape Kleinanzeigen.de for 'E-Bike Bosch' under €1500.
-  3. Save data.json.
-  4. Run prepare.py → capture RUN_SCORE.
-  5. If new_score > best_score:
-       - Overwrite results.tsv with new best.
-       - Send ntfy.sh push notification (topic: ebike-germany-99).
-       - git commit -am "New high score: {score}".
-  6. Else:
-       - git reset --hard  (discard any changes).
+Sources:
+  - RABE-Bike.de  /en/sale   (refurbished, Vue SSR)
+  - Airtracks.de  Bosch/Shimano collection + sale collection (Shopify)
+
+Pipeline (run with: python3 train.py):
+  1. Read current best score from best_score.txt (0 if missing).
+  2. Scrape both sources for Bosch/Shimano bikes under €2500.
+  3. Save results to data.json.
+  4. Run prepare.py → capture RUN_SCORE from stdout.
+  5. new_score > best_score?
+       YES → update best_score.txt, fire ntfy.sh (topic: ebike-germany-99),
+              git commit -am "New high score: {score}"
+       NO  → git reset --hard
 """
 
-import csv
-import json
 import re
+import json
 import subprocess
 import sys
 import time
-from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -30,10 +30,11 @@ from bs4 import BeautifulSoup
 # Config
 # ---------------------------------------------------------------------------
 
-NTFY_TOPIC = "ebike-germany-99"
-NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
-RESULTS_TSV = Path("results.tsv")
-DATA_JSON = Path("data.json")
+NTFY_TOPIC   = "ebike-germany-99"
+NTFY_URL     = f"https://ntfy.sh/{NTFY_TOPIC}"
+DATA_JSON    = Path("data.json")
+BEST_SCORE   = Path("best_score.txt")
+MAX_PRICE    = 2500.0
 
 HEADERS = {
     "User-Agent": (
@@ -50,19 +51,21 @@ SESSION.headers.update(HEADERS)
 
 MOTOR_KEYWORDS = ["bosch", "yamaha", "shimano", "brose", "fazua"]
 
-# Words that MUST appear in title/desc for a Kleinanzeigen hit to be kept
-BIKE_WORDS = {"bike", "e-bike", "ebike", "pedelec", "fahrrad", "rad", "bosch"}
-
-
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
 def extract_price(text: str):
-    """Parse a German price string like '1.299 €' → 1299.0"""
+    """Parse European price strings: '2.799,00 €' → 2799.0"""
     if not text:
         return None
-    cleaned = re.sub(r"[^\d,.]", "", text.replace(".", "").replace(",", "."))
+    # Remove currency symbols, spaces, then convert German decimal
+    cleaned = re.sub(r"[^\d,.]", "", text.strip())
+    # Handle both 1.299,00 and 1299.00 formats
+    if "," in cleaned and "." in cleaned:
+        cleaned = cleaned.replace(".", "").replace(",", ".")
+    elif "," in cleaned:
+        cleaned = cleaned.replace(",", ".")
     try:
         val = float(cleaned)
         return val if val > 0 else None
@@ -78,176 +81,201 @@ def detect_motor(text: str) -> str:
     return "Unknown"
 
 
-def is_bike_listing(title: str, description: str) -> bool:
-    """Return True only if the listing looks like an actual bike."""
-    combined = (title + " " + description).lower()
-    return any(w in combined for w in BIKE_WORDS)
-
-
-# ---------------------------------------------------------------------------
-# Score bookkeeping
-# ---------------------------------------------------------------------------
-
 def read_best_score() -> float:
-    """Read the top run_score row from results.tsv; return 0 if missing."""
-    if not RESULTS_TSV.exists():
-        return 0.0
     try:
-        with open(RESULTS_TSV, newline="", encoding="utf-8") as fh:
-            reader = csv.DictReader(fh, delimiter="\t")
-            best = 0.0
-            for row in reader:
-                try:
-                    best = max(best, float(row.get("run_score", 0)))
-                except ValueError:
-                    pass
-            return best
+        return float(BEST_SCORE.read_text().strip())
     except Exception:
         return 0.0
 
 
-def write_best_score(score: float, listings: int, commit_sha: str = "pending"):
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
-    # Preserve existing rows and prepend the new best
-    existing_rows = []
-    if RESULTS_TSV.exists():
+def write_best_score(score: float):
+    BEST_SCORE.write_text(f"{score}\n")
+
+
+# ---------------------------------------------------------------------------
+# Source 1 – RABE-Bike.de  /en/sale
+# ---------------------------------------------------------------------------
+
+def scrape_rabe(pages: int = 4) -> list:
+    results = []
+    base = "https://www.rabe-bike.de"
+
+    for page in range(1, pages + 1):
+        url = f"{base}/en/sale" if page == 1 else f"{base}/en/sale?page={page}"
         try:
-            with open(RESULTS_TSV, newline="", encoding="utf-8") as fh:
-                reader = csv.DictReader(fh, delimiter="\t")
-                for row in reader:
-                    existing_rows.append(row)
-        except Exception:
-            pass
+            resp = SESSION.get(url, timeout=20)
+            resp.raise_for_status()
+        except requests.RequestException as exc:
+            print(f"[RABE] page {page} error: {exc}")
+            break
 
-    fieldnames = ["run_score", "listings", "timestamp", "commit"]
-    new_row = {
-        "run_score": score,
-        "listings": listings,
-        "timestamp": ts,
-        "commit": commit_sha,
-    }
-    with open(RESULTS_TSV, "w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=fieldnames, delimiter="\t")
-        writer.writeheader()
-        writer.writerow(new_row)
-        for row in existing_rows:
-            writer.writerow({k: row.get(k, "") for k in fieldnames})
+        soup = BeautifulSoup(resp.text, "html.parser")
+        cards = soup.select(".product-link")
+        if not cards:
+            print(f"[RABE] no cards on page {page}, stopping.")
+            break
+
+        for card in cards:
+            # Title: <span id="title-XXXXXX">
+            title_el = card.select_one("[id^='title-']")
+            # Price: <span id="price-XXXXXX">
+            price_el = card.select_one("[id^='price-']")
+            # Link: first <a href> that is a product URL (not a size-variant icon)
+            link_el = card.select_one("a[href]")
+
+            title      = title_el.get_text(strip=True) if title_el else ""
+            price_text = price_el.get_text(strip=True) if price_el else ""
+            href       = link_el["href"] if link_el and link_el.has_attr("href") else ""
+
+            if not title:
+                continue
+
+            price = extract_price(price_text)
+            if price and price > MAX_PRICE:
+                continue
+
+            motor = detect_motor(title)
+            full_url = base + href if href.startswith("/") else href
+
+            results.append({
+                "source":      "RABE",
+                "title":       title,
+                "price_eur":   price,
+                "motor":       motor,
+                "condition":   "refurbished",
+                "location":    "DE",
+                "url":         full_url,
+                "description": f"RABE Sale – {title[:100]}",
+            })
+
+        print(f"[RABE] page {page}: {len(cards)} cards found")
+        time.sleep(1.5)
+
+    print(f"[RABE] kept {len(results)} listings under €{MAX_PRICE:.0f}")
+    return results
 
 
 # ---------------------------------------------------------------------------
-# Notification
+# Source 2 – Airtracks.de  (Shopify)
 # ---------------------------------------------------------------------------
 
-def send_notification(score: float, top_deals: list):
-    """POST a push notification to ntfy.sh."""
-    if not top_deals:
-        body = f"New best score: {score:.2f} – no deals to highlight."
-    else:
-        lines = [f"🏆 New best score: {score:.2f}\n"]
-        for d in top_deals[:3]:
-            price = f"€{d['price_eur']:.0f}" if d.get("price_eur") else "N/A"
-            lines.append(f"• {d['title'][:50]} @ {price}")
+AIRTRACKS_COLLECTIONS = [
+    # Bosch/Shimano-motor focused collection
+    "e-bike-herren-damen-bosch-schimano-motor",
+    # Dedicated sale/discount collection
+    "e-bikes-fahrrader-sale",
+]
+
+
+def scrape_airtracks(pages: int = 3) -> list:
+    results = []
+    base = "https://www.airtracks.de"
+    seen_urls: set = set()
+
+    for collection in AIRTRACKS_COLLECTIONS:
+        for page in range(1, pages + 1):
+            url = (
+                f"{base}/collections/{collection}"
+                if page == 1
+                else f"{base}/collections/{collection}?page={page}"
+            )
+            try:
+                resp = SESSION.get(url, timeout=20)
+                resp.raise_for_status()
+            except requests.RequestException as exc:
+                print(f"[Airtracks] {collection} page {page} error: {exc}")
+                break
+
+            soup = BeautifulSoup(resp.text, "html.parser")
+            cards = soup.select(".product-item") or soup.select("product-item")
+            if not cards:
+                print(f"[Airtracks] {collection} page {page}: no cards, stopping.")
+                break
+
+            page_new = 0
+            for card in cards:
+                title_el = card.select_one(".product-item-meta__title")
+                # Prefer highlighted (sale) price, fall back to any price
+                price_el = (
+                    card.select_one(".price--highlight")
+                    or card.select_one(".price")
+                )
+                link_el = card.select_one("a[href]")
+
+                title      = title_el.get_text(strip=True) if title_el else ""
+                price_text = price_el.get_text(strip=True) if price_el else ""
+                href       = link_el["href"] if link_el and link_el.has_attr("href") else ""
+
+                if not title:
+                    continue
+
+                price = extract_price(price_text)
+                if price and price > MAX_PRICE:
+                    continue
+
+                full_url = base + href if href.startswith("/") else href
+                if full_url in seen_urls:
+                    continue
+                seen_urls.add(full_url)
+
+                motor = detect_motor(title)
+
+                results.append({
+                    "source":      "Airtracks",
+                    "title":       title,
+                    "price_eur":   price,
+                    "motor":       motor,
+                    "condition":   "new",
+                    "location":    "DE",
+                    "url":         full_url,
+                    "description": f"{collection} – {title[:100]}",
+                })
+                page_new += 1
+
+            print(f"[Airtracks] {collection} page {page}: {page_new} new items")
+
+            # Shopify: if fewer cards than expected, we're on the last page
+            if len(cards) < 24:
+                break
+
+            time.sleep(1.2)
+
+    print(f"[Airtracks] kept {len(results)} listings under €{MAX_PRICE:.0f}")
+    return results
+
+
+# ---------------------------------------------------------------------------
+# ntfy.sh notification
+# ---------------------------------------------------------------------------
+
+def send_notification(score: float, deals: list):
+    if deals:
+        top = deals[:3]
+        lines = [f"New best score: {score:.2f}\n"]
+        for d in top:
+            price = f"EUR {d['price_eur']:.0f}" if d.get("price_eur") else "N/A"
+            motor = d.get("motor", "?")
+            lines.append(f"* {d['title'][:50]} @ {price} [{motor}]")
         body = "\n".join(lines)
+    else:
+        body = f"New best score: {score:.2f} – no top deals."
 
     try:
-        # ntfy headers must be ASCII-safe; encode body as UTF-8
-        safe_title = f"E-Bike Alert - Score {score:.2f}".encode("ascii", "ignore").decode()
-        resp = requests.post(
+        resp = SESSION.post(
             NTFY_URL,
             data=body.encode("utf-8"),
             headers={
-                "Title": safe_title,
+                "Title": f"E-Bike Alert - Score {score:.2f}".encode("ascii", "ignore").decode(),
                 "Priority": "high",
                 "Tags": "bike,deal,germany",
                 "Content-Type": "text/plain; charset=utf-8",
             },
             timeout=10,
         )
-        if resp.status_code == 200:
-            print(f"[ntfy] Notification sent to {NTFY_TOPIC} ✓")
-        else:
-            print(f"[ntfy] Unexpected status {resp.status_code}: {resp.text[:100]}")
+        status = "OK" if resp.status_code == 200 else f"HTTP {resp.status_code}"
+        print(f"[ntfy] {NTFY_TOPIC} → {status}")
     except Exception as exc:
-        print(f"[ntfy] Failed to send notification: {exc}")
-
-
-# ---------------------------------------------------------------------------
-# Scraper – Kleinanzeigen.de
-# ---------------------------------------------------------------------------
-
-def scrape_kleinanzeigen(max_price: int = 1500, pages: int = 3) -> list:
-    results = []
-    base = "https://www.kleinanzeigen.de"
-
-    for page in range(1, pages + 1):
-        # Use keyword search query params for accurate matching
-        params = {
-            "keywords": "E-Bike Bosch",
-            "maxPrice": max_price,
-        }
-        if page == 1:
-            url = f"{base}/s-suche/k0"
-        else:
-            url = f"{base}/s-suche/seite:{page}/k0"
-
-        try:
-            resp = SESSION.get(url, params=params, timeout=20)
-            resp.raise_for_status()
-        except requests.RequestException as exc:
-            print(f"[Kleinanzeigen] page {page} error: {exc}")
-            break
-
-        soup = BeautifulSoup(resp.text, "html.parser")
-
-        articles = soup.select("article.aditem")
-        if not articles:
-            print(f"[Kleinanzeigen] no listings on page {page}, stopping.")
-            break
-
-        for art in articles:
-            title_el  = art.select_one(".ellipsis") or art.select_one("h2")
-            price_el  = art.select_one(".aditem-main--middle--price-shipping--price")
-            link_el   = art.select_one("a.ellipsis") or art.select_one("a[href]")
-            loc_el    = art.select_one(".aditem-main--top--left")
-            desc_el   = art.select_one(".aditem-main--middle--description")
-
-            title       = title_el.get_text(strip=True) if title_el else ""
-            price_text  = price_el.get_text(strip=True) if price_el else ""
-            href        = link_el["href"] if link_el and link_el.has_attr("href") else ""
-            location    = loc_el.get_text(strip=True) if loc_el else ""
-            description = desc_el.get_text(strip=True) if desc_el else ""
-
-            if not title:
-                continue
-
-            # Drop clearly off-topic results
-            if not is_bike_listing(title, description):
-                continue
-
-            price = extract_price(price_text)
-
-            # Hard filter: skip anything priced above the ceiling
-            if price and price > max_price:
-                continue
-
-            motor = detect_motor(f"{title} {description}")
-            full_url = base + href if href.startswith("/") else href
-
-            results.append({
-                "source":      "Kleinanzeigen",
-                "title":       title,
-                "price_eur":   price,
-                "motor":       motor,
-                "condition":   "used",
-                "location":    location,
-                "url":         full_url,
-                "description": description[:200],
-            })
-
-        time.sleep(1.5)
-
-    print(f"[Kleinanzeigen] kept {len(results)} relevant listings")
-    return results
+        print(f"[ntfy] failed: {exc}")
 
 
 # ---------------------------------------------------------------------------
@@ -255,20 +283,18 @@ def scrape_kleinanzeigen(max_price: int = 1500, pages: int = 3) -> list:
 # ---------------------------------------------------------------------------
 
 def run_evaluator() -> float:
-    """Run prepare.py in a subprocess and parse RUN_SCORE=<value>."""
+    """Run prepare.py and return the RUN_SCORE float."""
     try:
-        result = subprocess.run(
+        proc = subprocess.run(
             [sys.executable, "prepare.py"],
-            capture_output=True,
-            text=True,
-            timeout=60,
+            capture_output=True, text=True, timeout=60,
         )
-        print(result.stdout)
-        if result.returncode != 0:
-            print(f"[evaluator] stderr: {result.stderr[:300]}", file=sys.stderr)
+        output = proc.stdout
+        print(output)
+        if proc.returncode != 0:
+            print(f"[evaluator] stderr: {proc.stderr[:300]}", file=sys.stderr)
             return 0.0
-
-        for line in reversed(result.stdout.splitlines()):
+        for line in reversed(output.splitlines()):
             m = re.search(r"RUN_SCORE=([0-9.]+)", line)
             if m:
                 return float(m.group(1))
@@ -281,21 +307,20 @@ def run_evaluator() -> float:
 # Git helpers
 # ---------------------------------------------------------------------------
 
-def git_commit(score: float):
+def git_commit(score: float) -> str:
     msg = f"New high score: {score:.2f}"
     subprocess.run(["git", "add", "-A"], check=False)
     subprocess.run(["git", "commit", "-m", msg], check=False)
-    # Capture SHA
-    sha_result = subprocess.run(
+    r = subprocess.run(
         ["git", "rev-parse", "--short", "HEAD"],
-        capture_output=True, text=True
+        capture_output=True, text=True,
     )
-    return sha_result.stdout.strip()
+    return r.stdout.strip()
 
 
 def git_reset():
     subprocess.run(["git", "reset", "--hard"], check=False)
-    print("[git] Reset – score did not improve.")
+    print("[git] reset – score did not improve.")
 
 
 # ---------------------------------------------------------------------------
@@ -303,11 +328,14 @@ def git_reset():
 # ---------------------------------------------------------------------------
 
 def main():
-    best_score = read_best_score()
-    print(f"Current best score: {best_score}")
+    best = read_best_score()
+    print(f"Current best score : {best}")
+    print("=" * 60)
 
     # --- Scrape ---
-    deals = scrape_kleinanzeigen(max_price=1500, pages=3)
+    deals: list = []
+    deals.extend(scrape_rabe(pages=4))
+    deals.extend(scrape_airtracks(pages=3))
 
     # Deduplicate by URL
     seen, unique = set(), []
@@ -319,27 +347,22 @@ def main():
 
     with open(DATA_JSON, "w", encoding="utf-8") as fh:
         json.dump(unique, fh, ensure_ascii=False, indent=2)
-    print(f"Saved {len(unique)} unique deals → {DATA_JSON}")
+    print(f"\nSaved {len(unique)} unique deals → {DATA_JSON}")
 
     # --- Evaluate ---
     new_score = run_evaluator()
-    print(f"\nNew score:  {new_score}")
-    print(f"Best score: {best_score}")
+    print(f"\nNew score  : {new_score}")
+    print(f"Best score : {best}")
 
     # --- Decide ---
-    if new_score > best_score:
-        print(f"\n✅ Improvement! {best_score} → {new_score}")
+    if new_score > best:
+        print(f"\n[+] Improvement! {best} → {new_score}")
         sha = git_commit(new_score)
-        write_best_score(new_score, len(unique), sha)
-        # Load scored data for notification
-        try:
-            import csv as _csv
-            top_deals = unique[:3]
-        except Exception:
-            top_deals = []
-        send_notification(new_score, top_deals)
+        write_best_score(new_score)
+        send_notification(new_score, unique[:5])
+        print(f"[git] committed as {sha}")
     else:
-        print(f"\n❌ No improvement ({new_score} ≤ {best_score}). Rolling back.")
+        print(f"\n[-] No improvement ({new_score} <= {best}). Rolling back.")
         git_reset()
 
 
