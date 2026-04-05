@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "train",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["train.py"],
+      "port": 8080
+    },
+    {
+      "name": "evaluate",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["prepare.py"],
+      "port": 8081
+    }
+  ]
+}
