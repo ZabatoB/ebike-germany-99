@@ -1,572 +1,1234 @@
 [
   {
     "source": "RABE",
-    "title": "Focus JamÂ² SL 8.8",
-    "price_eur": 2.799,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/focus-jam-sl-8-8-limeyellow-carbon-raw-2023?childsku=63096",
-    "description": "RABE Sale – Focus JamÂ² SL 8.8"
-  },
-  {
-    "source": "RABE",
     "title": "Trek Madone SL 5 Gen 8",
-    "price_eur": 1.899,
+    "price": 1899.0,
     "motor": "Unknown",
+    "battery_wh": 400.0,
     "condition": "refurbished",
     "location": "DE",
     "url": "https://www.rabe-bike.de/en/trek-madone-sl-5-gen-8-matte-deep-smoke-2025?childsku=72381",
-    "description": "RABE Sale – Trek Madone SL 5 Gen 8"
-  },
-  {
-    "source": "RABE",
-    "title": "Focus JamÂ² SL 8.8",
-    "price_eur": 2.999,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/focus-jam-sl-8-8-lightgrey-carbon-raw-2023?childsku=63092",
-    "description": "RABE Sale – Focus JamÂ² SL 8.8"
-  },
-  {
-    "source": "RABE",
-    "title": "Trek Checkpoint SL 6 AXS Gen 3",
-    "price_eur": 2.699,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/trek-checkpoint-sl-6-axs-gen-3-matte-hex-marianas-blue-2025?childsku=79476",
-    "description": "RABE Sale – Trek Checkpoint SL 6 AXS Gen 3"
-  },
-  {
-    "source": "RABE",
-    "title": "Cannondale Moterra 2",
-    "price_eur": 4.999,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/cannondale-moterra-2-matte-black-2025?childsku=76484",
-    "description": "RABE Sale – Cannondale Moterra 2"
-  },
-  {
-    "source": "RABE",
-    "title": "Focus Izalco Max 9.7",
-    "price_eur": 2.999,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/focus-izalco-max-9-7-heritage-blue-stone-blue-2024?childsku=79560",
-    "description": "RABE Sale – Focus Izalco Max 9.7"
-  },
-  {
-    "source": "RABE",
-    "title": "Cannondale Moterra 2",
-    "price_eur": 4.999,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/cannondale-moterra-carbon-2-jade-2025?childsku=76489",
-    "description": "RABE Sale – Cannondale Moterra 2"
-  },
-  {
-    "source": "RABE",
-    "title": "Focus VamÂ² SL 9.9",
-    "price_eur": 3.799,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/focus-vam-sl-9-9-carbon-raw-2024?childsku=68569",
-    "description": "RABE Sale – Focus VamÂ² SL 9.9"
-  },
-  {
-    "source": "RABE",
-    "title": "Kalkhoff Entice 5+ Excite ABS",
-    "price_eur": 4.399,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/kalkhoff-entice-5-excite-abs-moonstone-grey-2026?childsku=81876",
-    "description": "RABE Sale – Kalkhoff Entice 5+ Excite ABS"
-  },
-  {
-    "source": "RABE",
-    "title": "2nd Choice - CUBE Stereo Hybrid ONE44 Pro 800",
-    "price_eur": 3.199,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/2-wahl-cube-stereo-hybrid-one44-pro-800-shiftblush-n-raisin-2026?childsku=84126",
-    "description": "RABE Sale – 2nd Choice - CUBE Stereo Hybrid ONE44 Pro 800"
+    "description": ""
   },
   {
     "source": "RABE",
     "title": "Cannondale Scalpel HT Carbon 3",
-    "price_eur": 1.619,
+    "price": 1619.0,
     "motor": "Unknown",
+    "battery_wh": 400.0,
     "condition": "refurbished",
     "location": "DE",
     "url": "https://www.rabe-bike.de/en/cannondale-scalpel-ht-carbon-3-ion-blue-2026?childsku=82537",
-    "description": "RABE Sale – Cannondale Scalpel HT Carbon 3"
-  },
-  {
-    "source": "RABE",
-    "title": "2nd Choice - CUBE Kathmandu Hybrid Pro 800 Easy Entry",
-    "price_eur": 2.999,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/2-wahl-cube-kathmandu-hybrid-pro-800-sunglow-n-chrome-2026-easy-entry?childsku=84135",
-    "description": "RABE Sale – 2nd Choice - CUBE Kathmandu Hybrid Pro 800 Easy Entry"
+    "description": ""
   },
   {
     "source": "RABE",
     "title": "2nd Choice - Elite Justo 2",
-    "price_eur": 699.0,
+    "price": 699.0,
     "motor": "Unknown",
+    "battery_wh": 400.0,
     "condition": "refurbished",
     "location": "DE",
     "url": "https://www.rabe-bike.de/en/2-wahl-elite-justo-2",
-    "description": "RABE Sale – 2nd Choice - Elite Justo 2"
-  },
-  {
-    "source": "RABE",
-    "title": "Haibike Lyke CF 10",
-    "price_eur": 3.499,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/haibike-lyke-cf-10-carbon-silver-2025?childsku=82437",
-    "description": "RABE Sale – Haibike Lyke CF 10"
+    "description": ""
   },
   {
     "source": "RABE",
     "title": "CUBE Litening AIR C:68X Frameset",
-    "price_eur": 1.999,
+    "price": 1999.0,
     "motor": "Unknown",
+    "battery_wh": 400.0,
     "condition": "refurbished",
     "location": "DE",
     "url": "https://www.rabe-bike.de/en/cube-litening-air-c-68x-frameset-team-replica-2025?childsku=82640",
-    "description": "RABE Sale – CUBE Litening AIR C:68X Frameset"
-  },
-  {
-    "source": "RABE",
-    "title": "2nd Choice - Cannondale Synapse Carbon 3 SmartSense",
-    "price_eur": 3.399,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/2-wahl-cannondale-synapse-carbon-3-smartsense-stvzo-cashmere-2026?childsku=84039",
-    "description": "RABE Sale – 2nd Choice - Cannondale Synapse Carbon 3 SmartSense"
-  },
-  {
-    "source": "RABE",
-    "title": "2nd Choice - CUBE Kathmandu Hybrid Pro 800 Easy Entry",
-    "price_eur": 2.999,
-    "motor": "Unknown",
-    "condition": "refurbished",
-    "location": "DE",
-    "url": "https://www.rabe-bike.de/en/2-wahl-cube-kathmandu-hybrid-pro-800-sunglow-n-chrome-2026?childsku=84121",
-    "description": "RABE Sale – 2nd Choice - CUBE Kathmandu Hybrid Pro 800 Easy Entry"
+    "description": "With the Litening AIR C:68X Intermarché-Wanty team replica frame set, the podium is within reach. Its stylish transparent rear triangle in fiery red reveals the high-quality C:68X® carbon construction, complemented by an extremely lightweight design."
   },
   {
     "source": "Airtracks",
     "title": "29 Zoll Herren E-BIKE SUV MTB MAVERIX BOSCH Performance Line CX 500Wh BOOST 85Nm 12 x GANG SHIMANO DEORE RD-6100",
-    "price_eur": 2499.0,
+    "price": 2499.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/29-zoll-e-mtb-suv-maverix-bosch-performance-line-cx-gen4-500wh-boost-85nm-12s-shimano-deore-rd-6100",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 29 Zoll Herren E-BIKE SUV MTB MAVERIX BOSCH Performance Line CX 500Wh BOOST 85Nm 12 x GANG SHIMANO D"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "29 Zoll Herren E-Bike SUV MTB MOTIV SR 2.0 Bosch Performance Line CX 625 Wh 9 x GANG SHIMANO RD-M2000 SGS",
-    "price_eur": 2399.0,
+    "price": 2399.0,
     "motor": "Bosch",
+    "battery_wh": 625.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/29-zoll-herren-e-bike-mtb-suv-mountainbike-bosch-performance-line-cx-gen4-625-wh-motiv-sr-2-0-9-gang",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 29 Zoll Herren E-Bike SUV MTB MOTIV SR 2.0 Bosch Performance Line CX 625 Wh 9 x GANG SHIMANO RD-M200"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Herren E-Bike City Fahrrad NOVA CITY BOSCH PERFORMANCE LINE 625Wh 5 GANG SHIMANO NEXUS INTER",
-    "price_eur": 2399.0,
+    "price": 2399.0,
     "motor": "Bosch",
+    "battery_wh": 625.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-city-fahrrad-nova-city-bosch-performance-line-625wh-5-gang-shimano-nexus-inter",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike City Fahrrad NOVA CITY BOSCH PERFORMANCE LINE 625Wh 5 GANG SHIMANO NEXUS INTER"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "27,5 E-MTB Mountainbike BOSCH Performance Line CX 625 Wh MAVERIX 10 x GANG SHIMANO DEORE  RD-M5120 SGS",
-    "price_eur": 2399.0,
+    "price": 2399.0,
     "motor": "Bosch",
+    "battery_wh": 625.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/29-zoll-e-bike-mtb-bosch-performance-line-cx-625-wh-maverix-10-x-gang-shimano-deore-rd-m5120-sgs",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 27,5 E-MTB Mountainbike BOSCH Performance Line CX 625 Wh MAVERIX 10 x GANG SHIMANO DEORE  RD-M5120 S"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Herren E-Bike Trekking Fahrrad MOTIV TR.2.0 BOSCH PERFORMANCE LINE 625 Wh 9s SHIMANO ALTUS",
-    "price_eur": 2299.0,
+    "price": 2299.0,
     "motor": "Bosch",
+    "battery_wh": 625.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-motiv-tr-2-0-bosch-performance-line-625wh-9s-shimano-altus",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad MOTIV TR.2.0 BOSCH PERFORMANCE LINE 625 Wh 9s SHIMANO ALTUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Damen E-Bike LS Trekking Fahrrad LUMINA BOSCH ACTIVE PLUS LINE 500 Wh 8s SHIMANO NEXUS",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-ls-trekking-fahrrad-lumina-bosch-active-plus-line-gen3-500-wh-8s-shimano-nexus",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike LS Trekking Fahrrad LUMINA BOSCH ACTIVE PLUS LINE 500 Wh 8s SHIMANO NEXUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "27,5\" E-Bike SUV Trekking Fahrrad LS Wave eAdventure 12.5 City Bike SHIMANO STEPS E 7000 630 Wh 10s SHIMANO DEORE RD-M5130 SGS",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Shimano",
+    "battery_wh": 630.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/27-5-zoll-damen-e-suv-fahrrad-e-bike-tiefeinsteiger-ls-eadventure-12-5-wave-shimano-steps-e-700-630-wh-deore-m5130-10-gang",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 27,5\" E-Bike SUV Trekking Fahrrad LS Wave eAdventure 12.5 City Bike SHIMANO STEPS E 7000 630 Wh 10s "
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "27,5 Zoll E-Bike MTB Mountainbike RAZOR SHIMANO STEPS EP800 500 Wh BOOST 85Nm 11s SHIMANO XT M8000",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Shimano",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/27-5-zoll-e-bike-mtb-mountainbike-razor-shimano-steps-ep800-500-wh-boost-85nm-11s-shimano-xt-m8000",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 27,5 Zoll E-Bike MTB Mountainbike RAZOR SHIMANO STEPS EP800 500 Wh BOOST 85Nm 11s SHIMANO XT M8000"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Herren E-Bike Trekking Fahrrad NOVA BOSCH PERFORMANCE LINE 500Wh 10s Shimano DEORE RD-T6000",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-nova-bosch-performance-line-500wh-10s-shimano-deore-rd-t6000",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad NOVA BOSCH PERFORMANCE LINE 500Wh 10s Shimano DEORE RD-T6000"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "27,5 Zoll E-Bike Damen SUV Mountainbike X3 SHIMANO STEPS EP800 504Wh BOOST 85Nm 10s SHIMANO RD-M5130",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Shimano",
+    "battery_wh": 504.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/27-5-zoll-e-bike-damen-suv-mountainbike-x3-shimano-steps-ep800-504wh-boost-85nm-10s-shimano-rd-m5130",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 27,5 Zoll E-Bike Damen SUV Mountainbike X3 SHIMANO STEPS EP800 504Wh BOOST 85Nm 10s SHIMANO RD-M5130"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Herren E-Bike Trekking Fahrrad LUMINA GX 3 BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT RD-T8000 SGS",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-heren-e-bike-lumina-gx-3-bosch-performance-line-powerpack-500-wh-shimano-xt-t-8000",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad LUMINA GX 3 BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT RD-"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28 Zoll Damen E-Bike LS CITY Fahrrad e-TOURING 11.9 City Bike SHIMANO STEPS E 6100 630 Wh 5 x GANG GATES CARBON BELT SHIMANO NEXUS INTER 5",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Shimano",
+    "battery_wh": 630.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-ls-city-fahrrad-e-touring-11-9-city-bike-shimano-steps-e-6100-630-wh-5-x-gang-shimano-nexus-inter-5",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll Damen E-Bike LS CITY Fahrrad e-TOURING 11.9 City Bike SHIMANO STEPS E 6100 630 Wh 5 x GANG G"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike Damen Trekking Fahrrad LUMINA GX3 LS BOSCH ACTIVE PLUS LINE 500 Wh 9 x GANG SHIMANO ALIVIO RD-M3100",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-trekking-fahrrad-lumina-gx3-bosch-active-plus-line-gen3-500-wh-9s-shimano-alivio-kopie",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Damen Trekking Fahrrad LUMINA GX3 LS BOSCH ACTIVE PLUS LINE 500 Wh 9 x GANG SHIMANO ALIVI"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28 Zoll Damen E-Bike LS City Fahrrad MOTIVE TF 1.7 Trekking Bike BOSCH ACTIVE PLUS LINE 400 Wh 7s SHIMANO NEXUS",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 400.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/motive-tf-1-7-wave",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll Damen E-Bike LS City Fahrrad MOTIVE TF 1.7 Trekking Bike BOSCH ACTIVE PLUS LINE 400 Wh 7s SH"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Damen E-Bike Trekking Fahrrad MOTIV TR.2.0L BOSCH PERFORMANCE LINE 500 Wh 9s SHIMANO ALTUS",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-trekking-fahrrad-motiv-tr-2-0l-bosch-performance-line-500-wh-9s-shimano-altus",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike Trekking Fahrrad MOTIV TR.2.0L BOSCH PERFORMANCE LINE 500 Wh 9s SHIMANO ALTUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Herren E-Bike Trekking Fahrrad MOTIV TR.2.0 BOSCH PERFORMANCE LINE 500 Wh 9s SHIMANO ALTUS",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-motiv-tr-2-0-bosch-performance-line-500-wh-9s-shimano-altus",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad MOTIV TR.2.0 BOSCH PERFORMANCE LINE 500 Wh 9s SHIMANO ALTUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28 Zoll E-Bike LS Wave CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS",
-    "price_eur": 2190.0,
+    "price": 2190.0,
     "motor": "Shimano",
+    "battery_wh": 504.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-ls-wave-city-fahrrad-nova-shimano-stieps-e6100-504wh-8-x-gang-shimano-nexus",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll E-Bike LS Wave CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Damen E-Bike Trekking Fahrrad LUMINA GX3  BOSCH ACTIVE PLUS LINE 500 Wh 9s SHIMANO ALIVIO RD T-4000",
-    "price_eur": 2149.0,
+    "price": 2149.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-lumina-gx-3-bosch-performance-line-powerpack-500-wh-shimano-xt-t-8000",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike Trekking Fahrrad LUMINA GX3  BOSCH ACTIVE PLUS LINE 500 Wh 9s SHIMANO ALIVIO RD T-4"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Herren E-Bike Trekking Fahrrad LUMINA BOSCH PERFORMANCE LINE CX 500Wh 9s SHIMANO ALIVIO",
-    "price_eur": 2099.0,
+    "price": 2099.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-lumina-bosch-performance-line-cx-gen4-500wh-9s-shimano-alivio",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad LUMINA BOSCH PERFORMANCE LINE CX 500Wh 9s SHIMANO ALIVIO"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28 Zoll Damen E-Bike CITY Fahrrad e-TOURING 11.7 City Bike SHIMANO STEPS E 6100 504 Wh 5 x GANG SHIMANO NEXUS INTER 5",
-    "price_eur": 2099.0,
+    "price": 2099.0,
     "motor": "Shimano",
+    "battery_wh": 504.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-city-fahrrad-e-touring-11-7-city-bike-shimano-steps-e-6100-504-wh-5-x-gang-shimano-nexus-inter-5",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll Damen E-Bike CITY Fahrrad e-TOURING 11.7 City Bike SHIMANO STEPS E 6100 504 Wh 5 x GANG SHIM"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Herren E-Bike Trekking Fahrrad LUMINA BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT",
-    "price_eur": 2099.0,
+    "price": 2099.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-trekking-fahrrad-lumina-bosch-performance-line-gen3-500wh-10s-shimano-deore-xt",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Herren E-Bike Trekking Fahrrad LUMINA BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28 Zoll Damen E-Bike LS CITY Fahrrad e-TOURING 11.7 City Bike SHIMANO STEPS E 6100 504 Wh 5 x GANG SHIMANO NEXUS INTER 5",
-    "price_eur": 2099.0,
+    "price": 2099.0,
     "motor": "Shimano",
+    "battery_wh": 504.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/etouring-11-7-gent",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll Damen E-Bike LS CITY Fahrrad e-TOURING 11.7 City Bike SHIMANO STEPS E 6100 504 Wh 5 x GANG S"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike Herren CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS",
-    "price_eur": 1999.0,
+    "price": 1999.0,
     "motor": "Shimano",
+    "battery_wh": 504.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-herren-city-fahrrad-nova-shimano-stieps-e6100-504wh-8-x-gang-shimano-nexus",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike Damen CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS",
-    "price_eur": 1999.0,
+    "price": 1999.0,
     "motor": "Shimano",
+    "battery_wh": 504.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-damen-city-fahrrad-nova-shimano-stieps-e6100-504wh-8-x-gang-shimano-nexus",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Damen CIty Fahrrad NOVA SHIMANO STEPS E-6100 504Wh 8 x GANG SHIMANO NEXUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Damen E-Bike LS Trekking Fahrrad e-TOURING 12.8 City Bike SHIMANO STEPS E 7000 504 Wh 10s SHIMANO DEORE RD-M5130 SGS",
-    "price_eur": 1849.0,
+    "price": 1849.0,
     "motor": "Shimano",
+    "battery_wh": 504.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-tiefeinsteiger-ls-etouring-12-8-wave-shimano-steps-e-7000-504-wh-deore-rd-m5130-10-gang",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike LS Trekking Fahrrad e-TOURING 12.8 City Bike SHIMANO STEPS E 7000 504 Wh 10s SHIMAN"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Trekking Fahrrad E-Bike V-Tron LS Rack BOSCH ACTIVE LINE 400 Wh 7 GANG SHIMANO NEXUS",
-    "price_eur": 1799.0,
+    "price": 1799.0,
     "motor": "Bosch",
+    "battery_wh": 400.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-trekking-fahrrad-e-bike-v-tron-ls-rack-bosch-active-plus-line-gen3-400-wh-7-gang-shimano-nex",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Trekking Fahrrad E-Bike V-Tron LS Rack BOSCH ACTIVE LINE 400 Wh 7 GANG SHIMANO NEXUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28 Zoll City Fahrrad E-Bike V-Tron CR LS RACK BOSCH ACTIVE LINE Gen3 400 Wh 7 GANG SHIMANO NEXUS",
-    "price_eur": 1749.0,
+    "price": 1749.0,
     "motor": "Bosch",
+    "battery_wh": 400.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/v-tron-wave-1",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll City Fahrrad E-Bike V-Tron CR LS RACK BOSCH ACTIVE LINE Gen3 400 Wh 7 GANG SHIMANO NEXUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike City Fahrrad V-Tron RACK BOSCH ACTIVE LINE PLUS 400 Wh 7s SHIMANO NEXUS RÜCKTRITTBREMSE",
-    "price_eur": 1699.0,
+    "price": 1699.0,
     "motor": "Bosch",
+    "battery_wh": 400.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-city-fahrrad-e-bike-v-tron-cr-ls-rack-bosch-active-plus-line-gen3-400-wh-7-gang-shimano-nexus-kopie",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike City Fahrrad V-Tron RACK BOSCH ACTIVE LINE PLUS 400 Wh 7s SHIMANO NEXUS RÜCKTRITTBREMSE"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike Damen City Fahrrad X-Tron SR2 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER 5",
-    "price_eur": 1699.0,
+    "price": 1699.0,
     "motor": "Shimano",
+    "battery_wh": 418.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-damen-city-fahrrad-x-tron-sr2-shimano-stieps-e5000-418wh-5-gang-shimano-nexus-inter-5",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Damen City Fahrrad X-Tron SR2 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER 5"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike Herren Trekking Fahrrad X-Tron SR1 SHIMANO STEPS E-6100 504Wh 9 GANG SHIMANO ALIVIO",
-    "price_eur": 1699.0,
+    "price": 1699.0,
     "motor": "Shimano",
+    "battery_wh": 504.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-herren-trekking-fahrrad-x-tron-sr1-shimano-stieps-e6100-504wh-9-gang-shimano-alivio",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren Trekking Fahrrad X-Tron SR1 SHIMANO STEPS E-6100 504Wh 9 GANG SHIMANO ALIVIO"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike Herren City Fahrrad X-Tron SR2 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER 5",
-    "price_eur": 1699.0,
+    "price": 1699.0,
     "motor": "Shimano",
+    "battery_wh": 418.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-herren-city-fahrrad-x-tron-sr2-shimano-stieps-e5000-418wh-5-gang-shimano-nexus-inter-5",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren City Fahrrad X-Tron SR2 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER 5"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Damen E-Bike SHIMANO STEPS E-5000 City LS Fahrrad Wave Citybike 7 x Gang SHIMANO NEXUS",
-    "price_eur": 1549.0,
+    "price": 1549.0,
     "motor": "Shimano",
+    "battery_wh": 400.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-damen-e-bike-shimano-steps-e5000-city-ls-fahrrad-wave-citybike-7-x-gang-shimano-nexus",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" Damen E-Bike SHIMANO STEPS E-5000 City LS Fahrrad Wave Citybike 7 x Gang SHIMANO NEXUS"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28 Zoll E-Bike City Fahrrad LS WAVE SR3 CR SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER",
-    "price_eur": 1499.0,
+    "price": 1499.0,
     "motor": "Shimano",
+    "battery_wh": 418.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-e-bike-city-fahrrad-creon-ls-wave-x-tron-sr3-shimano-st%D0%B5ps-e-5000-418wh-5-gang-shimano-nexus-inter-kopie",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28 Zoll E-Bike City Fahrrad LS WAVE SR3 CR SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike Herren City Fahrrad X-Tron SR3 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER",
-    "price_eur": 1499.0,
+    "price": 1499.0,
     "motor": "Shimano",
+    "battery_wh": 418.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/28-zoll-herren-e-bike-xtron-sr3-shimano-steps-e-5000-418-wh-nexus-inter-5-gang",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren City Fahrrad X-Tron SR3 SHIMANO STEPS E-5000 418Wh 5 GANG SHIMANO NEXUS INTER"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike Herren Urban Bike STREET Citybike BAFANG 350WH GATES CARBON BELT SINGLE SPEED",
-    "price_eur": 1199.0,
+    "price": 1199.0,
     "motor": "Unknown",
+    "battery_wh": 350.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bike-herren-damen-bosch-schimano-motor/products/29-zoll-e-bike-mtb-mountainbike-quantum-steps-e7000-504wh-10-x-gang-shimano-deore-rd-m5120-sgs-kopie",
-    "description": "e-bike-herren-damen-bosch-schimano-motor – 28\" E-Bike Herren Urban Bike STREET Citybike BAFANG 350WH GATES CARBON BELT SINGLE SPEED"
+    "description": "e-bike-herren-damen-bosch-schimano-motor"
   },
   {
     "source": "Airtracks",
     "title": "28\" Herren E-Bike Trekking Fahrrad LUMINA GX 3 BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT RD-T8000 SGS",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/28-zoll-heren-e-bike-lumina-gx-3-bosch-performance-line-powerpack-500-wh-shimano-xt-t-8000",
-    "description": "e-bikes-fahrrader-sale – 28\" Herren E-Bike Trekking Fahrrad LUMINA GX 3 BOSCH PERFORMANCE LINE 500Wh 10s SHIMANO DEORE XT RD-"
+    "description": "e-bikes-fahrrader-sale"
   },
   {
     "source": "Airtracks",
     "title": "28\" E-Bike City Fahrrad V-Tron RACK BOSCH ACTIVE LINE PLUS 400 Wh 7s SHIMANO NEXUS RÜCKTRITTBREMSE",
-    "price_eur": 1699.0,
+    "price": 1699.0,
     "motor": "Bosch",
+    "battery_wh": 400.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/28-zoll-city-fahrrad-e-bike-v-tron-cr-ls-rack-bosch-active-plus-line-gen3-400-wh-7-gang-shimano-nexus-kopie",
-    "description": "e-bikes-fahrrader-sale – 28\" E-Bike City Fahrrad V-Tron RACK BOSCH ACTIVE LINE PLUS 400 Wh 7s SHIMANO NEXUS RÜCKTRITTBREMSE"
+    "description": "e-bikes-fahrrader-sale"
   },
   {
     "source": "Airtracks",
     "title": "28\" Damen E-Bike Trekking Fahrrad LUMINA GX3  BOSCH ACTIVE PLUS LINE 500 Wh 9s SHIMANO ALIVIO RD T-4000",
-    "price_eur": 2149.0,
+    "price": 2149.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/28-zoll-damen-e-bike-lumina-gx-3-bosch-performance-line-powerpack-500-wh-shimano-xt-t-8000",
-    "description": "e-bikes-fahrrader-sale – 28\" Damen E-Bike Trekking Fahrrad LUMINA GX3  BOSCH ACTIVE PLUS LINE 500 Wh 9s SHIMANO ALIVIO RD T-4"
+    "description": "e-bikes-fahrrader-sale"
   },
   {
     "source": "Airtracks",
     "title": "28 Zoll Damen E-Bike LS City Fahrrad MOTIVE TF 1.7 Trekking Bike BOSCH ACTIVE PLUS LINE 400 Wh 7s SHIMANO NEXUS",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 400.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/motive-tf-1-7-wave",
-    "description": "e-bikes-fahrrader-sale – 28 Zoll Damen E-Bike LS City Fahrrad MOTIVE TF 1.7 Trekking Bike BOSCH ACTIVE PLUS LINE 400 Wh 7s SH"
+    "description": "e-bikes-fahrrader-sale"
   },
   {
     "source": "Airtracks",
     "title": "28\" Damen E-Bike LS Trekking Fahrrad LUMINA BOSCH ACTIVE PLUS LINE 500 Wh 8s SHIMANO NEXUS",
-    "price_eur": 2199.0,
+    "price": 2199.0,
     "motor": "Bosch",
+    "battery_wh": 500.0,
     "condition": "new",
     "location": "DE",
     "url": "https://www.airtracks.de/collections/e-bikes-fahrrader-sale/products/28-zoll-damen-e-bike-ls-trekking-fahrrad-lumina-bosch-active-plus-line-gen3-500-wh-8s-shimano-nexus",
-    "description": "e-bikes-fahrrader-sale – 28\" Damen E-Bike LS Trekking Fahrrad LUMINA BOSCH ACTIVE PLUS LINE 500 Wh 8s SHIMANO NEXUS"
+    "description": "e-bikes-fahrrader-sale"
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Bosch E-Bike Fast Charger 6A – ORIGINALVERPACKT (neu)",
+    "price": 80.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "12555 Köpenick",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/bosch-e-bike-fast-charger-6a-originalverpackt-neu-/3373166371-217-3365",
+    "description": "Modell: Bosch Fast Charger (6A) Zustand: sehr gut / wie neu Leistung: 6A (schnelles Laden)..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Kalkhoff Agattu 4.B E-Bike – Bosch – 500Wh – Akku top – 5700 km",
+    "price": 1.45,
+    "motor": "Bosch",
+    "battery_wh": 500.0,
+    "condition": "used",
+    "location": "49716 Meppen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/kalkhoff-agattu-4-b-e-bike-bosch-500wh-akku-top-5700-km/3373165758-217-3030",
+    "description": "Sehr gepflegtes und technisch einwandfreies Kalkhoff Agattu 4.B E-Bike in matt-dunkelgrau.\n\nDer..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "E-Bike Simplon Kagu Gr. M (RH 51), Bosch CX, 625 WH",
+    "price": 1.5,
+    "motor": "Bosch",
+    "battery_wh": 625.0,
+    "condition": "used",
+    "location": "47661 Issum",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/e-bike-simplon-kagu-gr-m-rh-51-bosch-cx-625-wh/3373163786-217-1152",
+    "description": "Zum Verkauf kommt ein Simplon Kagu mit Trapezrahmen in Gr. M, Rahmenhöhe 51 cm, Farbe: blau\n\nDas..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Granville Herren (XL) E Bike Trekking Bike mit Bosch Motor",
+    "price": 1.1,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "47906 Kempen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/granville-herren-xl-e-bike-trekking-bike-mit-bosch-motor/3373153683-217-1140",
+    "description": "Granville Herren E Bike Trekking Bike\n\n•\n\n• Bosch Aktive Line Motor\n\n• Kilometerstand: Nur ca 3700..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "E -Bike Raleigh 7R Bosch",
+    "price": 650.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "49477 Ibbenbüren",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/e-bike-raleigh-7r-bosch/3373151137-217-1913",
+    "description": "Zu verkaufen habe ich mein gebrauchtes\n\n\nE-Bike Raleigh 7R Farbe Blau, Bosch Elektrik,..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Ragos Sport EVO Bosch Performance Line E-Bike",
+    "price": 549.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "28239 Gröpelingen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/ragos-sport-evo-bosch-performance-line-e-bike/3373150030-217-21870",
+    "description": "Moin, hiermit verkaufe ich hier ein sehr schönes und modernes E-Bike Ragos Sport EVO. Das E-Bike..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Ragos Sport EVO Bosch Performance Line E-Bike",
+    "price": 549.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "28239 Gröpelingen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/ragos-sport-evo-bosch-performance-line-e-bike/3373147973-217-21870",
+    "description": "Moin, hiermit verkaufe ich hier ein sehr schönes und modernes E-Bike Ragos Sport EVO. Das E-Bike..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Bosch Purion Display NEU + Bedieneinheit | E-Bike Original",
+    "price": 55.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "37077 Göttingen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/bosch-purion-display-neu-bedieneinheit-e-bike-original/3373143765-217-3135",
+    "description": "Ich verkaufe ein neues und unbenutztes Bosch Purion Display inklusive Bedieneinheit.\n\nDas Display..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Top E-Bike Centurion E-Fire (Bosch / Alfine) in Teningen\"",
+    "price": 749.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "79331 Teningen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/top-e-bike-centurion-e-fire-bosch-alfine-in-teningen-/3373140966-217-8917",
+    "description": "Hallo,\nich verkaufe mein Centurion E-Fire City E-Bike nur heute zum absoluten Sonderpreis, da ich..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "MTB Bulls SIX 50 E1 CX mit Bosch Motor 46 Rahmen",
+    "price": 695.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "53577 Neustadt (Wied)",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/mtb-bulls-six-50-e1-cx-mit-bosch-motor-46-rahmen/3373137780-217-1626",
+    "description": "MTB Rahmengröße 46 cm 27,5 Zoll Ausführung.Bereifung Schwalbe SMART SAM Plus 27,5-2.30..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "E Bike Victoria 5,7 SE Wave, 28 Zoll, Bosch Active Line",
+    "price": 690.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "26919 Brake (Unterweser)",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/e-bike-victoria-5-7-se-wave-28-zoll-bosch-active-line/3365663731-217-2718",
+    "description": "Ich biete ein,\nE Bike Victoria 5,7 SE Wave, 28 Zoll, Bosch Active Line Mittelmotor, 7 Gang Shimano..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Bosch E-bike Akku \"PowerTube 750 horizontal +  Kapazität Test 94%",
+    "price": 399.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "65549 Limburg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/bosch-e-bike-akku-powertube-750-horizontal-kapazitaet-test-94-/3182094012-217-4376",
+    "description": "Bosch E-bike Akku \"PowerTube 750 horizontal\" (BBP3770) - smart System\n\nBaujahr Juli..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "SCOTT Roxter E Ride, Bosch  400Wh, Jugend, 24 Zoll",
+    "price": 1.25,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "92431 Neunburg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/scott-roxter-e-ride-bosch-400wh-jugend-24-zoll/3373133283-217-5749",
+    "description": "Hallo, verkaufe ein 24 Zoll Ebike von SCOTT.\nDas Rad ist in einen guten Zustand und besitzt einen..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Bulls E Bike mit Bosch Motor CX Top Zustand",
+    "price": 1.399,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "88138 Weißensberg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/bulls-e-bike-mit-bosch-motor-cx-top-zustand/3373132322-217-7705",
+    "description": "Wir verkaufen unser zuverlässiges und bestens gepflegtes, ausgestattetes Bulls E Bike mit kräftigem..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Ebikebatterie 10Ah/360Wh für Bosch ActiveLine/Perform. AkkuVision",
+    "price": 449.0,
+    "motor": "Bosch",
+    "battery_wh": 360.0,
+    "condition": "used",
+    "location": "27211 Bassum",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/ebikebatterie-10ah-360wh-fuer-bosch-activeline-perform-akkuvision/2002232355-217-2660",
+    "description": "Jetzt bekommt ihr bei uns auch alles vom Laufrad bis zum E-Bike.\n\nBosch Powerpacks von E-Bike..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "E-Bike Victoria e-Urban 11.9 Neuwertig 185km Riemen Bosch",
+    "price": 1.5,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "21357 Bardowick",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/e-bike-victoria-e-urban-11-9-neuwertig-185km-riemen-bosch/3373127721-217-17466",
+    "description": "Neuwertiges E-Bike der Topmarke Victoria\nModell Urban 11.9\nUnisexmodell\nNeuwertiger Zustand ( Nie..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "E-Bike 28 Damen Centurion E-FireTour R760 Bosch Akku625Wh Neurad",
+    "price": 1.449,
+    "motor": "Bosch",
+    "battery_wh": 625.0,
+    "condition": "used",
+    "location": "09405 Gornau",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/e-bike-28-damen-centurion-e-firetour-r760-bosch-akku625wh-neurad/3373123460-217-20177",
+    "description": "Angeboten wird ein Centurion E-Bike Trapez 28 Zoll E-Fire Tour R760\nRahmenhöhe53cm, Akku..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Hercules Roberta R7 Wave E-Bike, RH 54, Bosch Akku neuwertig",
+    "price": 450.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "26389 Wilhelmshaven",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/hercules-roberta-r7-wave-e-bike-rh-54-bosch-akku-neuwertig/3373116702-217-3101",
+    "description": "Ich biete mein Hercules Roberta R7 Wave E-Bike mit dem Baujahr 2015 zum Verkauf an. Es ist ein..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Victoria Damen E-Bike 28 Zoll - Bosch Motor - sehr guter Zustand",
+    "price": 600.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "50181 Bedburg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/victoria-damen-e-bike-28-zoll-bosch-motor-sehr-guter-zustand/3373114411-217-1197",
+    "description": "Ich verkaufe ein gut gepflegtes Damen E-Bike der Marke\nVictoria.\n28 Zoll Damenrad\nBosch Active Line..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Bosch PowerTube 750 Wh E-Bike Akku Smart System mit Ladegerät",
+    "price": 220.0,
+    "motor": "Bosch",
+    "battery_wh": 750.0,
+    "condition": "used",
+    "location": "42279 Oberbarmen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/bosch-powertube-750-wh-e-bike-akku-smart-system-mit-ladegeraet/3373112292-217-1567",
+    "description": "Verkaufe hiermit eine Bosch 750 WH E-Bike Akku mit einer Laufleistung von 1400 km.\nAkku ist immer..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "E bike Dynamics Pedelec Elektrofahrrad Bosch",
+    "price": 1.19,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "45130 Rüttenscheid",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/e-bike-dynamics-pedelec-elektrofahrrad-bosch/3373111326-217-2045",
+    "description": "Hallo zusammen,\nIch biete ein E bike Dynamics 28 Zoll in sehr gepflegtem Zustand an.\nNur 280 km..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Speed Box 2.0 für Bosch e-bike Motor (e-bike Tuning Chip)",
+    "price": 110.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "35305 Grünberg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/speed-box-2-0-fuer-bosch-e-bike-motor-e-bike-tuning-chip-/3373102480-217-4681",
+    "description": "Verkaufe diese originalverpackte unbenutzten speedbox 2.0 für das Bosch e-bike System 2.\n\nEs..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "E-Bike Saxonette Urbano mit Bosch Motor 28 Zoll BJ 2023",
+    "price": 620.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "34132 Kassel",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/e-bike-saxonette-urbano-mit-bosch-motor-28-zoll-bj-2023/3373098084-217-4934",
+    "description": "Rahme 55 L Unisex für 160-190 Körperhöhe .\n9 Gang Shimano Schaltung.\nHydraulik..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Flyer e-bike (schwarz, Shimano, Bosch Professional, Nyon, Herren)",
+    "price": 999.0,
+    "motor": "Bosch",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "94553 Mariaposching",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/flyer-e-bike-schwarz-shimano-bosch-professional-nyon-herren-/3373094312-217-6023",
+    "description": "Flyer E-Bike (schwarz) – Bosch Performance Line, Shimano – Top Zustand\n\nIch verkaufe mein..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Vw polo 9N3 tür vorne recht Seite 2/3 2008",
+    "price": 69.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "44807 Bochum-​Nord",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-polo-9n3-tuer-vorne-recht-seite-2-3-2008/2446988782-223-1942",
+    "description": "Herzlich Willkommen bei Alhamwi-Autoteile\n\nzum Verkauf bieten wir ihnen von einem VW polo..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Pavillon-Seitenteile 2er-Set, 300x400 cm, grau, für \"Athen\"",
+    "price": 48.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "33609 Bielefeld (Innenstadt)",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/pavillon-seitenteile-2er-set-300x400-cm-grau-fuer-athen-/3024931224-89-1067",
+    "description": "Erweitere deinen Pavillon \"Athen\" (300x400 cm) mit den KONIFERA Pavillonseitenteilen. Die..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "AUDI A5 8T S5 S LINE Schwellerleisten SEITENSCHWELLER 2 Stück",
+    "price": 95.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "02826 Görlitz",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/audi-a5-8t-s5-s-line-schwellerleisten-seitenschweller-2-stueck/3180765200-223-3813",
+    "description": "Wir verkaufen optisches Tuningzubehör. Wir verkaufen Teile aus GFK.\n\nAlle unsere Produkte sind mit..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Cormoran Schirm mit Seitenwand, 2,50m, NEU!",
+    "price": 40.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "25873 Oldersbek",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/cormoran-schirm-mit-seitenwand-2-50m-neu-/3372062831-230-29153",
+    "description": "Originalverpackt, NP 49.90€,\nNagelneu, schadlos, gute Qualität, mit Transporttasche\n\nKein Versand!"
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "AUDI A6 A6 C7 4G0 SEITENSCHWELLER 2 Stück",
+    "price": 95.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "02826 Görlitz",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/audi-a6-a6-c7-4g0-seitenschweller-2-stueck/3181240465-223-3813",
+    "description": "Wir verkaufen optisches Tuningzubehör. Wir verkaufen Teile aus GFK.\n\nAlle unsere Produkte sind mit..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Siemens Seitenkanalverdichter 2 typen",
+    "price": 1.1,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "97877 Wertheim",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/siemens-seitenkanalverdichter-2-typen/3105695164-84-8561",
+    "description": "Siemens Seitenkanalverdichter\n1. Motor Elmo G2BH 1610\n2. \" G2BH5100\nPreis je Einheit zzgl.19 %..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Ich biete einen Dreiseitenkipper 2,7t zur Vermietung an",
+    "price": 50.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "99610 Sömmerda",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/ich-biete-einen-dreiseitenkipper-2-7t-zur-vermietung-an/3078707016-276-3567",
+    "description": "Ich biete einen Dreiseitenkipper 2,7t zur Vermietung an.\n\nEr hat folgende Innenmaße ca: 3,10m x..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Schwerlastregal Seitenteile 2,25 m x 0,40 m",
+    "price": 30.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "24939 Flensburg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/schwerlastregal-seitenteile-2-25-m-x-0-40-m/3371520411-87-717",
+    "description": "2 Seitenteile Stahl 2,25 x 40 cm\n\nhöhenverstellbare Winkelstreben\n\nAnsicht und Abholung in der..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "VW Caddy Seitenteil Seitenwand 2K0810210 Ä-Saule nagelneu",
+    "price": 349.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "42579 Heiligenhaus",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-caddy-seitenteil-seitenwand-2k0810210-ae-saule-nagelneu/3104383406-223-1180",
+    "description": "Nagelneu und Grundiert VW Caddy Seitenteil Seitenwand 2K0810210 Ä-Saule nagelneu\nVW Teilnummer..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Schweller BMW G30 Seitenverkleidung 2x Links 7387337 5er 2017 bj",
+    "price": 140.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "42853 Remscheid",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/schweller-bmw-g30-seitenverkleidung-2x-links-7387337-5er-2017-bj/2391076668-223-1032",
+    "description": "70€ pro Stück\n\nRizqi Autoteile.\n\nReifenmontage ist nach Terminvereinbarung möglich\n4 Reifen ab und..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Pavillion Seitenwand 2 Seiten beige",
+    "price": 5.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "91056 Erlangen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/pavillion-seitenwand-2-seiten-beige/3371310150-89-6798",
+    "description": "Biete ein Paar Seitenwände in beige bestehend aus zwei Seiten mit Fenster für einen 3x3m Pavillion..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Kombi-Gasgrill Gas & Holzkohle mit Seitenbrenner 2 Flächen",
+    "price": 50.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "84556 Kastl",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/kombi-gasgrill-gas-holzkohle-mit-seitenbrenner-2-flaechen/3371226085-89-5910",
+    "description": "Verkaufe unseren praktischen Kombi-Grill mit zwei verschiedenen Grillflächen. Das Gerät bietet dir..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Hepco Becker Seitenkoffer 2×37 Liter Ungenutzt",
+    "price": 250.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "85051 Ingolstadt",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/hepco-becker-seitenkoffer-2-37-liter-ungenutzt/3370978841-306-7615",
+    "description": "1 Satz Seitenkoffer Hepco Becker Junior Flash 40 (37 Liter) mit Gleichschliessung.\n• wasserdicht..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Thule Safari Residenz Seitenteile 2 Stück G2 G3 Markisenvorzelt",
+    "price": 220.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "85110 Kipfenberg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/thule-safari-residenz-seitenteile-2-stueck-g2-g3-markisenvorzelt/3370875717-230-7589",
+    "description": "Verkaufe folgende gebrauchte zwei Seitenteile (Rechts + Links) für das Thule..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Dachfanggerüst 15,5qm Gerüst  mit Seitenschutznetz 2,5x6,2m ^=",
+    "price": 989.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "74523 Schwäbisch Hall",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/dachfanggeruest-15-5qm-geruest-mit-seitenschutznetz-2-5x6-2m-/2677610656-84-15243",
+    "description": "Sehr geehrter Interessent,\nSie sind auf der Suche nach einer qualitativ hochwertige und günstige..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Audi A4 B8 Bremssattel hinten elektronisch Beifahrerseite  2,0 TD",
+    "price": 30.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "66989 Petersberg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/audi-a4-b8-bremssattel-hinten-elektronisch-beifahrerseite-2-0-td/1912743277-223-5175",
+    "description": "Bitte schreiben Sie uns über Ebay-Kleinanzeigen an, wir bearbeiten Ihre Anfrage so schnell wie..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Vw t5 t6 Innenverkleidung seitenverkleidungen 2x schiebetür",
+    "price": 150.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "42855 Remscheid",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-t5-t6-innenverkleidung-seitenverkleidungen-2x-schiebetuer/2704779909-223-1033",
+    "description": "Verkleidungen t5 t6 multivan mit 2 schiebetüren.\nDie Schiebetür verkleidung für die rechte seite..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Polo 2G tür vorne recht Seite 2G4831312F",
+    "price": 149.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "44807 Bochum-​Nord",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/polo-2g-tuer-vorne-recht-seite-2g4831312f/2628108169-223-1942",
+    "description": "Herzlich Willkommen bei Alhamwi-Autoteile\n\nzum Verkauf bieten wir ihnen von einem VW polo..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Konica Minolta bizhub C224e nur 3317 Seiten+ 2 originale Toner",
+    "price": 1.1,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "22397 Hamburg Duvenstedt",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/konica-minolta-bizhub-c224e-nur-3317-seiten-2-originale-toner/3369612278-225-9473",
+    "description": "Farb-Multifunktionsdrucker – extrem niedriger Zähler!\n\nSehr niedriger Zählerstand: Nur ca. 3.317..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Gasgrill 4-flammig mit Seitenkocher 2. Wahl",
+    "price": 209.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "42327 Vohwinkel",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/gasgrill-4-flammig-mit-seitenkocher-2-wahl/3369394740-87-1579",
+    "description": "Gasgrill 4-flammig mit Seitenkocher 2. Wahl\n\n- 4 Hauptbrenner aus Edelstahl mit einer Leistung von..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "FAZ Die Erste Seite ,  2 Großbände im Schuber",
+    "price": 20.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "67105 Schifferstadt",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/faz-die-erste-seite-2-grossbaende-im-schuber/3368874619-76-4956",
+    "description": "Verkaufe diese besondere Jubiläumsausgabe der Frankfurter Allgemeinen Zeitung mit dem Titel..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "2 x Seitenwand 3 x2,60 cm",
+    "price": 25.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "34121 Kassel",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/2-x-seitenwand-3-x2-60-cm/3366942818-89-4924",
+    "description": "Hallo, ich biete hier zwei prakotisches Seitenwände an, das perfekt für deinen Garten ist..oder..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Mazda 2 DE Fahrertüre Links Weiss Fahrerseite 3 türer",
+    "price": 229.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "76646 Bruchsal",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/mazda-2-de-fahrertuere-links-weiss-fahrerseite-3-tuerer/3284424677-223-8795",
+    "description": "Wie Sie sehen verkaufen wir hier eine Mazda 2 DE Fahrertüre Links Weiss Fahrerseite 3 türer\n\n- Der..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Fensterheber/Motor Fahrerseite (3-Türer)",
+    "price": 58.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "41065 Mönchengladbach",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fensterheber-motor-fahrerseite-3-tuerer-/3124757468-223-1967",
+    "description": "Biete hier einen Fensterheber Motor von einem Audi A3 8P an. Der Motor ist von der Fahrerseite..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Honda cb250/360 Seitendeckel 3D gedruckt",
+    "price": 20.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "35415 Pohlheim",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/honda-cb250-360-seitendeckel-3d-gedruckt/3366015209-306-4663",
+    "description": "Hallo,\nIch drucke für ihre Honda einen Seitendeckel egal ob links oder rechts.\nFarbe: Schwarz, Weiß..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "VW Golf 2 Seitenscheibe 3 Türer Rechts",
+    "price": 60.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "45968 Gladbeck",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-golf-2-seitenscheibe-3-tuerer-rechts/3283450636-223-1801",
+    "description": "Biete hier eine originale klare Seitenscheibe für Golf 2 an.\n3 Türer\nRechte Seite,..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Ford Fiesta V (JH; JD) Tür vorne links Fahrerseite 3-Türer",
+    "price": 99.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "45899 Gelsenkirchen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/ford-fiesta-v-jh-jd-tuer-vorne-links-fahrerseite-3-tuerer/1827158851-223-1004",
+    "description": "Ford Fiesta V (JH; JD) Tür vorne links Fahrerseite 3-Türer\n\nBevor Sie die Anfahrt antreten vorher..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Solo Benzin Rasenmäher Profi 551 R mit Seitenauswurf 3.7 PS",
+    "price": 300.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "38667 Bad Harzburg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/solo-benzin-rasenmaeher-profi-551-r-mit-seitenauswurf-3-7-ps/3365716868-89-14380",
+    "description": "Hallo, ich biete hier meinen leistungsstarken Solo Benzin-Rasenmäher Profi 551 R an. Dieser robuste..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "VW Golf 2 Seitenscheibe 3 Türer linke Seite",
+    "price": 60.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "45968 Gladbeck",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-golf-2-seitenscheibe-3-tuerer-linke-seite/3283455492-223-1801",
+    "description": "Biete hier eine originale klare Seitenscheibe für Golf 2 an.\n3 Türer\nRechte Seite,..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "3 Seitenkipper 3.5T Kipper Anhänger Günstig mieten 3,5T",
+    "price": 55.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "74706 Osterburken",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/3-seitenkipper-3-5t-kipper-anhaenger-guenstig-mieten-3-5t/3365450979-276-8761",
+    "description": "3-Seitenkipper / PKW-Anhänger zu vermieten – 3,5 t\n\nVermietung eines robusten..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Seitenwandmarkise  3,50m x1,80 m Neu",
+    "price": 60.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "45470 Mülheim (Ruhr)",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/seitenwandmarkise-3-50m-x1-80-m-neu/3365418770-87-2063",
+    "description": "Neu ! Nur für's Foto ausgepackt.Maße siehe Foto. Nur Abholung. Privat Verkauf , keine Garantie..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Anhänger / 3 Seitenkipper / 3,5 Tonnen / hydraulisch / Mieten",
+    "price": 60.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "34123 Kassel",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/anhaenger-3-seitenkipper-3-5-tonnen-hydraulisch-mieten/2241566019-276-4926",
+    "description": "Miete Dir jetzt unseren elektrischen 3-Seiten Kipper der Firma Pongratz für Gartenabfälle,..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "VW passat B7 Tür hinten links Fahrerseite 3AE833055 R973",
+    "price": 150.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "50858 Köln Junkersdorf",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-passat-b7-tuer-hinten-links-fahrerseite-3ae833055-r973/2698780913-223-952",
+    "description": "Original VW passat B7 Tür hinten links Fahrerseite Limousine\n\nPasst ab Bj 2010-2015\n\nFarbe : Silber..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Kippanhänger Dreiseitenkipper 3,5t ZU VERMIETEN !!!",
+    "price": 75.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "57076 Siegen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/kippanhaenger-dreiseitenkipper-3-5t-zu-vermieten-/3309104085-276-1029",
+    "description": "Hapert 3- Seiten- Kipper Cobalt + Heavy Duty Gewerbeausführung 335x180x40 3500kg inkl...."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Auto-Markise Fahrzeugmarkise Seitenmarkise 3x2,1M Wohnwagen NEU",
+    "price": 105.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "29614 Soltau",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/auto-markise-fahrzeugmarkise-seitenmarkise-3x2-1m-wohnwagen-neu/3363357157-230-3257",
+    "description": "⭐️ JANSEN WERKZEUG & TECHNIK – 24/7 SERVICE ⭐️\n\n✔️ Sofort verfügbar – solange die Anzeige..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Daheim Deutschlands schönste Seiten 3 Zeitschriften Hefte Zeitung",
+    "price": 9.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "06869 Coswig (Anhalt)",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/daheim-deutschlands-schoenste-seiten-3-zeitschriften-hefte-zeitung/3363309348-76-17038",
+    "description": "Drei Zeitschriften 'DAHEIM', mit interessanten Themen von Reisen, Ausflüge, altes..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "BMW E36 Preisliste 1997 mit 97 Seiten + 3er Editionen Farben",
+    "price": 14.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "47918 Tönisvorst",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/bmw-e36-preisliste-1997-mit-97-seiten-3er-editionen-farben/3363044894-241-1121",
+    "description": "Sehr gut erhaltene Preisliste mit 97 Seiten, Stand 1. September 1997 für die BMW 3er-Reihe:..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Gartenpavillon mit Seitenvorhang 3x3x2,25m Taupe Pergola Pavillon",
+    "price": 199.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "97688 Bad Kissingen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/gartenpavillon-mit-seitenvorhang-3x3x2-25m-taupe-pergola-pavillon/2489071395-87-6737",
+    "description": "Gartenpavillon mit Seitenvorhang 3x3x2,25 m Taupe\n\nWenn Sie nach einem zusätzlichen Unterstand für..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "VW Polo zu verkaufen – Fahrbereit – TÜV fällig (seit 3 Monaten)",
+    "price": 500.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "94469 Deggendorf",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-polo-zu-verkaufen-fahrbereit-tuev-faellig-seit-3-monaten-/3362733354-216-16909",
+    "description": "Beschreibung:\nVerkaufe meinen VW Polo. Das Auto ist technisch in einem fahrbereiten Zustand, Motor..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Falt Pavillon 4 Seitenteilen 3x3m wasserdicht Marktzelt  Festzelt",
+    "price": 269.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "35799 Merenberg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/falt-pavillon-4-seitenteilen-3x3m-wasserdicht-marktzelt-festzelt/3362588464-87-4392",
+    "description": "* Versandhändler mit über 4.500 Followern\n→ Zahlreiche positive Bewertungen & langjährige..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Falt Pavillon 4 Seitenteile 3x3m wasserdicht Festzelt Marktzelt",
+    "price": 279.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "35799 Merenberg",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/falt-pavillon-4-seitenteile-3x3m-wasserdicht-festzelt-marktzelt/3362586605-87-4392",
+    "description": "* Versandhändler mit über 4.500 Followern\n→ Zahlreiche positive Bewertungen & langjährige..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "VW Golf 3 GT Seitenleisten / 3 türer",
+    "price": 60.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "02699 Königswartha",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-golf-3-gt-seitenleisten-3-tuerer/3362358480-223-21316",
+    "description": "Biete diese VW Golf 3 GT Seitenleisten von einem dreitürer mit Radlaufverbreiterungen an.\nMit dabei..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Mercedes A-Kl. W169 Seitenschweller 3-Türer rechts 1696101608",
+    "price": 49.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "76646 Bruchsal",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/mercedes-a-kl-w169-seitenschweller-3-tuerer-rechts-1696101608/1874227963-223-8795",
+    "description": "Wie Sie sehen verkaufen wir hier ein Mercedes A-Kl. W169 Seitenschweller 3-Türer rechts..."
+  },
+  {
+    "source": "Kleinanzeigen",
+    "title": "Simson..Schwalbe...S51..Motordeckel..Kupplungsseite 3 Gang",
+    "price": 30.0,
+    "motor": "Unknown",
+    "battery_wh": 400.0,
+    "condition": "used",
+    "location": "06188 Landsberg (Saalekreis)",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/simson-schwalbe-s51-motordeckel-kupplungsseite-3-gang/3362129790-305-17954",
+    "description": "Verkaufe original Motordeckel Kupplungsseite für Simson Schwalbe .S51 usw ..Guter gebrauchter..."
   }
 ]

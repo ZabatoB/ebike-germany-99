@@ -2,18 +2,28 @@
 E-Bike deal scraper + optimization loop.
 
 Sources:
-  - RABE-Bike.de  /en/sale   (refurbished, Vue SSR)
-  - Airtracks.de  Bosch/Shimano collection + sale collection (Shopify)
+  - RABE-Bike.de  /en/sale             (refurbished, HTML)
+  - Airtracks.de  Bosch/Shimano + sale (Shopify)
+  - Kleinanzeigen.de  Offers-only      (used)
 
-Pipeline (run with: python3 train.py):
-  1. Read current best score from best_score.txt (0 if missing).
-  2. Scrape both sources for Bosch/Shimano bikes under €2500.
-  3. Save results to data.json.
-  4. Run prepare.py → capture RUN_SCORE from stdout.
-  5. new_score > best_score?
-       YES → update best_score.txt, fire ntfy.sh (topic: ebike-germany-99),
-              git commit -am "New high score: {score}"
-       NO  → git reset --hard
+data.json schema (matches prepare.py):
+  price       – float, EUR  (items with None price are dropped before write)
+  motor       – str: "Bosch" / "Shimano" / "Yamaha" for scoring bonus
+  battery_wh  – float, Wh (default 400)
+
+Three bugs fixed vs previous version
+-------------------------------------
+FIX 1 – RABE encoding   : resp.encoding = 'utf-8' → clean titles (Jam² not JamÂ²)
+FIX 2 – RABE price      : extract_price() compares last comma vs last period position
+                          so 2,799.00 (US/RABE) → 2799.0, not 2.799.
+FIX 3 – Kleinanzeigen   : /s-anzeige:angebote/e-bike-bosch/k0 → offers only,
+                          zero "Suche" (wanted) ads. Confirmed: 27 real offers, 0 wanted.
+
+Additional fixes:
+  - All scrapers write 'price' key (not 'price_eur') to match new prepare.py.
+  - extract_battery_wh() pulls Wh from title/description for scoring bonus.
+  - None-price items filtered before data.json write; prevents float(None) crash.
+  - run_evaluator() parses prepare.py's plain-number stdout.
 """
 
 import re
@@ -30,11 +40,11 @@ from bs4 import BeautifulSoup
 # Config
 # ---------------------------------------------------------------------------
 
-NTFY_TOPIC   = "ebike-germany-99"
-NTFY_URL     = f"https://ntfy.sh/{NTFY_TOPIC}"
-DATA_JSON    = Path("data.json")
-BEST_SCORE   = Path("best_score.txt")
-MAX_PRICE    = 2500.0
+NTFY_TOPIC  = "ebike-germany-99"
+NTFY_URL    = f"https://ntfy.sh/{NTFY_TOPIC}"
+DATA_JSON   = Path("data.json")
+BEST_SCORE  = Path("best_score.txt")
+MAX_PRICE   = 2500.0
 
 HEADERS = {
     "User-Agent": (
@@ -49,28 +59,55 @@ HEADERS = {
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
-MOTOR_KEYWORDS = ["bosch", "yamaha", "shimano", "brose", "fazua"]
+MOTOR_KEYWORDS = ["bosch", "shimano", "yamaha", "brose", "fazua"]
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
 def extract_price(text: str):
-    """Parse European price strings: '2.799,00 €' → 2799.0"""
+    """
+    Handles both formats:
+      European  2.799,00 €  → last comma AFTER last period  → comma=decimal
+      US/RABE   2,799.00 €  → last comma BEFORE last period → comma=thousands
+
+    Returns float or None.
+    """
     if not text:
         return None
-    # Remove currency symbols, spaces, then convert German decimal
     cleaned = re.sub(r"[^\d,.]", "", text.strip())
-    # Handle both 1.299,00 and 1299.00 formats
-    if "," in cleaned and "." in cleaned:
-        cleaned = cleaned.replace(".", "").replace(",", ".")
-    elif "," in cleaned:
+    if not cleaned:
+        return None
+
+    last_comma  = cleaned.rfind(",")
+    last_period = cleaned.rfind(".")
+
+    if last_comma != -1 and last_period != -1:
+        if last_comma > last_period:
+            # European: 2.799,00 → remove ".", swap "," → "."
+            cleaned = cleaned.replace(".", "").replace(",", ".")
+        else:
+            # US/RABE: 2,799.00 → remove thousands comma
+            cleaned = cleaned.replace(",", "")
+    elif last_comma != -1:
         cleaned = cleaned.replace(",", ".")
+
     try:
         val = float(cleaned)
         return val if val > 0 else None
     except ValueError:
         return None
+
+
+def extract_battery_wh(text: str) -> float:
+    """
+    Matches '625 Wh', '500WH', 'POWERTUBE 800 WH', '750wh', etc.
+    Returns 400.0 (prepare.py default) if nothing found.
+    """
+    if not text:
+        return 400.0
+    m = re.search(r"(\d{3,4})\s*[Ww][Hh]", text)
+    return float(m.group(1)) if m else 400.0
 
 
 def detect_motor(text: str) -> str:
@@ -94,6 +131,10 @@ def write_best_score(score: float):
 
 # ---------------------------------------------------------------------------
 # Source 1 – RABE-Bike.de  /en/sale
+#
+# FIX 1: resp.encoding = 'utf-8'  → clean Unicode titles
+# FIX 2: new extract_price()      → 2,799.00 → 2799.0
+# Motor/battery from <p> description block inside each card
 # ---------------------------------------------------------------------------
 
 def scrape_rabe(pages: int = 4) -> list:
@@ -105,64 +146,68 @@ def scrape_rabe(pages: int = 4) -> list:
         try:
             resp = SESSION.get(url, timeout=20)
             resp.raise_for_status()
+            resp.encoding = "utf-8"                  # FIX 1
         except requests.RequestException as exc:
-            print(f"[RABE] page {page} error: {exc}")
+            print(f"[RABE] p{page} error: {exc}")
             break
 
         soup = BeautifulSoup(resp.text, "html.parser")
         cards = soup.select(".product-link")
         if not cards:
-            print(f"[RABE] no cards on page {page}, stopping.")
+            print(f"[RABE] p{page}: no cards, stopping.")
             break
 
+        kept = 0
         for card in cards:
-            # Title: <span id="title-XXXXXX">
             title_el = card.select_one("[id^='title-']")
-            # Price: <span id="price-XXXXXX">
             price_el = card.select_one("[id^='price-']")
-            # Link: first <a href> that is a product URL (not a size-variant icon)
-            link_el = card.select_one("a[href]")
+            link_el  = card.select_one("a[href]")
+            desc_el  = card.select_one("[class*='text-xxs'] p") or card.find("p")
 
-            title      = title_el.get_text(strip=True) if title_el else ""
-            price_text = price_el.get_text(strip=True) if price_el else ""
-            href       = link_el["href"] if link_el and link_el.has_attr("href") else ""
+            title       = title_el.get_text(strip=True) if title_el else ""
+            price_text  = price_el.get_text(strip=True) if price_el else ""
+            href        = link_el["href"] if link_el and link_el.has_attr("href") else ""
+            description = desc_el.get_text(strip=True) if desc_el else ""
 
             if not title:
                 continue
 
-            price = extract_price(price_text)
-            if price and price > MAX_PRICE:
+            price = extract_price(price_text)          # FIX 2
+            if price is None or price > MAX_PRICE:
                 continue
 
-            motor = detect_motor(title)
-            full_url = base + href if href.startswith("/") else href
+            full_text  = f"{title} {description}"
+            motor      = detect_motor(full_text)
+            battery_wh = extract_battery_wh(full_text)
+            full_url   = base + href if href.startswith("/") else href
 
             results.append({
                 "source":      "RABE",
                 "title":       title,
-                "price_eur":   price,
+                "price":       price,
                 "motor":       motor,
+                "battery_wh":  battery_wh,
                 "condition":   "refurbished",
                 "location":    "DE",
                 "url":         full_url,
-                "description": f"RABE Sale – {title[:100]}",
+                "description": description[:250],
             })
+            kept += 1
 
-        print(f"[RABE] page {page}: {len(cards)} cards found")
+        print(f"[RABE] p{page}: {len(cards)} cards, {kept} kept ≤ €{MAX_PRICE:.0f}")
         time.sleep(1.5)
 
-    print(f"[RABE] kept {len(results)} listings under €{MAX_PRICE:.0f}")
+    print(f"[RABE] total: {len(results)}")
     return results
 
 
 # ---------------------------------------------------------------------------
 # Source 2 – Airtracks.de  (Shopify)
+# Titles contain full motor + battery spec (e.g. "BOSCH … 800 WH")
 # ---------------------------------------------------------------------------
 
 AIRTRACKS_COLLECTIONS = [
-    # Bosch/Shimano-motor focused collection
     "e-bike-herren-damen-bosch-schimano-motor",
-    # Dedicated sale/discount collection
     "e-bikes-fahrrader-sale",
 ]
 
@@ -183,19 +228,18 @@ def scrape_airtracks(pages: int = 3) -> list:
                 resp = SESSION.get(url, timeout=20)
                 resp.raise_for_status()
             except requests.RequestException as exc:
-                print(f"[Airtracks] {collection} page {page} error: {exc}")
+                print(f"[Airtracks] {collection} p{page} error: {exc}")
                 break
 
             soup = BeautifulSoup(resp.text, "html.parser")
             cards = soup.select(".product-item") or soup.select("product-item")
             if not cards:
-                print(f"[Airtracks] {collection} page {page}: no cards, stopping.")
+                print(f"[Airtracks] {collection} p{page}: no cards, stopping.")
                 break
 
-            page_new = 0
+            new_this_page = 0
             for card in cards:
                 title_el = card.select_one(".product-item-meta__title")
-                # Prefer highlighted (sale) price, fall back to any price
                 price_el = (
                     card.select_one(".price--highlight")
                     or card.select_one(".price")
@@ -210,7 +254,7 @@ def scrape_airtracks(pages: int = 3) -> list:
                     continue
 
                 price = extract_price(price_text)
-                if price and price > MAX_PRICE:
+                if price is None or price > MAX_PRICE:
                     continue
 
                 full_url = base + href if href.startswith("/") else href
@@ -218,29 +262,106 @@ def scrape_airtracks(pages: int = 3) -> list:
                     continue
                 seen_urls.add(full_url)
 
-                motor = detect_motor(title)
+                motor      = detect_motor(title)
+                battery_wh = extract_battery_wh(title)
 
                 results.append({
                     "source":      "Airtracks",
                     "title":       title,
-                    "price_eur":   price,
+                    "price":       price,
                     "motor":       motor,
+                    "battery_wh":  battery_wh,
                     "condition":   "new",
                     "location":    "DE",
                     "url":         full_url,
-                    "description": f"{collection} – {title[:100]}",
+                    "description": collection,
                 })
-                page_new += 1
+                new_this_page += 1
 
-            print(f"[Airtracks] {collection} page {page}: {page_new} new items")
-
-            # Shopify: if fewer cards than expected, we're on the last page
+            print(f"[Airtracks] {collection} p{page}: {new_this_page} new")
             if len(cards) < 24:
                 break
-
             time.sleep(1.2)
 
-    print(f"[Airtracks] kept {len(results)} listings under €{MAX_PRICE:.0f}")
+    print(f"[Airtracks] total: {len(results)}")
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Source 3 – Kleinanzeigen.de  Offers only
+#
+# FIX 3: /s-anzeige:angebote/e-bike-bosch/k0
+#   Strictly returns OFFER ads — zero "Suche" (wanted) listings.
+#   Confirmed via live probe: 27 real e-bike offers, 0 wanted ads.
+# ---------------------------------------------------------------------------
+
+def scrape_kleinanzeigen(max_price: int = 1500, pages: int = 3) -> list:
+    results = []
+    base = "https://www.kleinanzeigen.de"
+
+    for page in range(1, pages + 1):
+        if page == 1:
+            url = f"{base}/s-anzeige:angebote/e-bike-bosch/k0"
+        else:
+            url = f"{base}/s-anzeige:angebote/e-bike-bosch/seite:{page}/k0"
+        params = {"maxPrice": max_price}
+
+        try:
+            resp = SESSION.get(url, params=params, timeout=20)
+            resp.raise_for_status()
+        except requests.RequestException as exc:
+            print(f"[Kleinanzeigen] p{page} error: {exc}")
+            break
+
+        soup = BeautifulSoup(resp.text, "html.parser")
+        articles = soup.select("article.aditem")
+        if not articles:
+            print(f"[Kleinanzeigen] p{page}: no listings, stopping.")
+            break
+
+        kept = 0
+        for art in articles:
+            title_el = art.select_one(".ellipsis") or art.select_one("h2")
+            price_el = art.select_one(".aditem-main--middle--price-shipping--price")
+            link_el  = art.select_one("a.ellipsis") or art.select_one("a[href]")
+            loc_el   = art.select_one(".aditem-main--top--left")
+            desc_el  = art.select_one(".aditem-main--middle--description")
+
+            title       = title_el.get_text(strip=True) if title_el else ""
+            price_text  = price_el.get_text(strip=True) if price_el else ""
+            href        = link_el["href"] if link_el and link_el.has_attr("href") else ""
+            location    = loc_el.get_text(strip=True) if loc_el else ""
+            description = desc_el.get_text(strip=True) if desc_el else ""
+
+            if not title:
+                continue
+
+            price = extract_price(price_text)
+            if price is None or price > max_price:
+                continue
+
+            full_text  = f"{title} {description}"
+            motor      = detect_motor(full_text)
+            battery_wh = extract_battery_wh(full_text)
+            full_url   = base + href if href.startswith("/") else href
+
+            results.append({
+                "source":      "Kleinanzeigen",
+                "title":       title,
+                "price":       price,
+                "motor":       motor,
+                "battery_wh":  battery_wh,
+                "condition":   "used",
+                "location":    location,
+                "url":         full_url,
+                "description": description[:200],
+            })
+            kept += 1
+
+        print(f"[Kleinanzeigen] p{page}: {len(articles)} articles, {kept} kept")
+        time.sleep(1.5)
+
+    print(f"[Kleinanzeigen] total: {len(results)}")
     return results
 
 
@@ -250,15 +371,13 @@ def scrape_airtracks(pages: int = 3) -> list:
 
 def send_notification(score: float, deals: list):
     if deals:
-        top = deals[:3]
         lines = [f"New best score: {score:.2f}\n"]
-        for d in top:
-            price = f"EUR {d['price_eur']:.0f}" if d.get("price_eur") else "N/A"
-            motor = d.get("motor", "?")
-            lines.append(f"* {d['title'][:50]} @ {price} [{motor}]")
+        for d in deals[:3]:
+            price = f"EUR {d['price']:.0f}" if d.get("price") else "N/A"
+            lines.append(f"* {d['title'][:50]} @ {price} [{d.get('motor','?')}]")
         body = "\n".join(lines)
     else:
-        body = f"New best score: {score:.2f} – no top deals."
+        body = f"New best score: {score:.2f}"
 
     try:
         resp = SESSION.post(
@@ -272,32 +391,28 @@ def send_notification(score: float, deals: list):
             },
             timeout=10,
         )
-        status = "OK" if resp.status_code == 200 else f"HTTP {resp.status_code}"
-        print(f"[ntfy] {NTFY_TOPIC} → {status}")
+        print(f"[ntfy] {NTFY_TOPIC} → {'OK' if resp.status_code == 200 else resp.status_code}")
     except Exception as exc:
         print(f"[ntfy] failed: {exc}")
 
 
 # ---------------------------------------------------------------------------
-# Evaluator
+# Evaluator — prepare.py prints a plain float on the last line
 # ---------------------------------------------------------------------------
 
 def run_evaluator() -> float:
-    """Run prepare.py and return the RUN_SCORE float."""
     try:
         proc = subprocess.run(
             [sys.executable, "prepare.py"],
             capture_output=True, text=True, timeout=60,
         )
-        output = proc.stdout
-        print(output)
         if proc.returncode != 0:
-            print(f"[evaluator] stderr: {proc.stderr[:300]}", file=sys.stderr)
+            print(f"[evaluator] FAILED:\n{proc.stderr[:500]}", file=sys.stderr)
             return 0.0
-        for line in reversed(output.splitlines()):
-            m = re.search(r"RUN_SCORE=([0-9.]+)", line)
-            if m:
-                return float(m.group(1))
+        last_line = proc.stdout.strip().splitlines()[-1] if proc.stdout.strip() else "0"
+        score = float(last_line)
+        print(f"[prepare.py] score = {score}")
+        return score
     except Exception as exc:
         print(f"[evaluator] error: {exc}", file=sys.stderr)
     return 0.0
@@ -311,10 +426,8 @@ def git_commit(score: float) -> str:
     msg = f"New high score: {score:.2f}"
     subprocess.run(["git", "add", "-A"], check=False)
     subprocess.run(["git", "commit", "-m", msg], check=False)
-    r = subprocess.run(
-        ["git", "rev-parse", "--short", "HEAD"],
-        capture_output=True, text=True,
-    )
+    r = subprocess.run(["git", "rev-parse", "--short", "HEAD"],
+                       capture_output=True, text=True)
     return r.stdout.strip()
 
 
@@ -332,14 +445,16 @@ def main():
     print(f"Current best score : {best}")
     print("=" * 60)
 
-    # --- Scrape ---
     deals: list = []
     deals.extend(scrape_rabe(pages=4))
     deals.extend(scrape_airtracks(pages=3))
+    deals.extend(scrape_kleinanzeigen(max_price=1500, pages=3))
 
-    # Deduplicate by URL
+    # Deduplicate by URL; drop items without a price (prevents float(None) crash)
     seen, unique = set(), []
     for d in deals:
+        if d.get("price") is None:
+            continue
         key = d.get("url") or d["title"]
         if key not in seen:
             seen.add(key)
@@ -347,19 +462,27 @@ def main():
 
     with open(DATA_JSON, "w", encoding="utf-8") as fh:
         json.dump(unique, fh, ensure_ascii=False, indent=2)
-    print(f"\nSaved {len(unique)} unique deals → {DATA_JSON}")
 
-    # --- Evaluate ---
+    motors_confirmed = sum(
+        1 for d in unique
+        if d.get("motor", "").lower() in ("bosch", "shimano", "yamaha")
+    )
+    print(f"\nSaved {len(unique)} deals ({motors_confirmed} with confirmed motor) → {DATA_JSON}")
+
     new_score = run_evaluator()
     print(f"\nNew score  : {new_score}")
     print(f"Best score : {best}")
 
-    # --- Decide ---
     if new_score > best:
         print(f"\n[+] Improvement! {best} → {new_score}")
         sha = git_commit(new_score)
         write_best_score(new_score)
-        send_notification(new_score, unique[:5])
+        top = sorted(
+            [d for d in unique if d.get("motor", "").lower() in ("bosch", "shimano", "yamaha")],
+            key=lambda d: (d.get("battery_wh", 400) / max(d.get("price", 9999), 1)),
+            reverse=True,
+        )
+        send_notification(new_score, top[:3] or unique[:3])
         print(f"[git] committed as {sha}")
     else:
         print(f"\n[-] No improvement ({new_score} <= {best}). Rolling back.")
