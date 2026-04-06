@@ -7,16 +7,20 @@ def calculate_value_score(bike):
     except (ValueError, TypeError):
         price = 5000
 
-    if price <= 0:
+    # Sanity Check: Reject 1 EUR placeholders and parsing errors like 1.45
+    if price < 100 or price > 5000:
+        return 0
+
+    # Sanity Check: Ensure it's actually a bike, not a printer or car door
+    title = str(bike.get('title', '')).lower()
+    if any(junk in title for junk in ["tür", "pavillon", "drucker", "schweller"]):
         return 0
 
     motor_text = str(bike.get('motor', '')).lower()
 
-    # Strict Motor Requirement: Force the AI to find the motor info
     if any(m in motor_text for m in ["bosch", "yamaha", "shimano"]):
         motor_multiplier = 1.5
     else:
-        # 0 points if it can't confirm a premium motor
         return 0
 
     try:
@@ -24,7 +28,6 @@ def calculate_value_score(bike):
     except (ValueError, TypeError):
         battery_wh = 400
 
-    # Excellent Value Formula
     score = (battery_wh * motor_multiplier) / (price / 100)
     return score
 

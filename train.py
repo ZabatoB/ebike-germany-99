@@ -2,28 +2,24 @@
 E-Bike deal scraper + optimization loop.
 
 Sources:
-  - RABE-Bike.de  /en/sale             (refurbished, HTML)
+  - RABE-Bike.de  /en/sale             (refurbished, __INITIAL_STATE__ script)
   - Airtracks.de  Bosch/Shimano + sale (Shopify)
-  - Kleinanzeigen.de  Offers-only      (used)
+  - Kleinanzeigen.de  Bicycles c214    (used)
 
 data.json schema (matches prepare.py):
-  price       – float, EUR  (items with None price are dropped before write)
+  price       – float, EUR incl. VAT  (items with None price dropped)
   motor       – str: "Bosch" / "Shimano" / "Yamaha" for scoring bonus
   battery_wh  – float, Wh (default 400)
 
-Three bugs fixed vs previous version
--------------------------------------
-FIX 1 – RABE encoding   : resp.encoding = 'utf-8' → clean titles (Jam² not JamÂ²)
-FIX 2 – RABE price      : extract_price() compares last comma vs last period position
-                          so 2,799.00 (US/RABE) → 2799.0, not 2.799.
-FIX 3 – Kleinanzeigen   : /s-anzeige:angebote/e-bike-bosch/k0 → offers only,
-                          zero "Suche" (wanted) ads. Confirmed: 27 real offers, 0 wanted.
-
-Additional fixes:
-  - All scrapers write 'price' key (not 'price_eur') to match new prepare.py.
-  - extract_battery_wh() pulls Wh from title/description for scoring bonus.
-  - None-price items filtered before data.json write; prevents float(None) crash.
-  - run_evaluator() parses prepare.py's plain-number stdout.
+Fixes in this version
+---------------------
+FIX 1 – RABE: extract from <script> tag (window.__INITIAL_STATE__) on each
+        product page → clean name, net price (×1.19 VAT), full description
+        for motor/battery detection.  No CSS selectors used.
+FIX 2 – Kleinanzeigen: /s-fahrraeder/e-bike-bosch/k0c214  → Bicycles category
+        (c214). Eliminates car doors, printers, and other junk.
+FIX 3 – extract_price(): '1.450' (German thousands-only) now correctly → 1450,
+        not 1.45.  Pattern: ^\d{1,3}(\.\d{3})+$ detected before float().
 """
 
 import re
@@ -67,17 +63,25 @@ MOTOR_KEYWORDS = ["bosch", "shimano", "yamaha", "brose", "fazua"]
 
 def extract_price(text: str):
     """
-    Handles both formats:
-      European  2.799,00 €  → last comma AFTER last period  → comma=decimal
-      US/RABE   2,799.00 €  → last comma BEFORE last period → comma=thousands
+    Handles all German/EU/US price formats:
+      '1.450 €'    → period-only thousands separator → 1450
+      '2.799,00 €' → European (period=thousands, comma=decimal) → 2799.00
+      '2,799.00 €' → US/RABE  (comma=thousands, period=decimal) → 2799.00
+      '1299,00 €'  → comma-only decimal → 1299.00
 
-    Returns float or None.
+    Key fix: '1.450' was previously parsed as 1.45 by float().
+    Now detected as a thousands-separator-only format (digits.3digits pattern).
     """
     if not text:
         return None
     cleaned = re.sub(r"[^\d,.]", "", text.strip())
     if not cleaned:
         return None
+
+    # FIX: German thousands-only format: '1.450', '2.499', '12.500'
+    # Pattern: 1-3 digits, then one or more groups of .XXX (exactly 3 digits)
+    if "," not in cleaned and re.match(r"^\d{1,3}(\.\d{3})+$", cleaned):
+        cleaned = cleaned.replace(".", "")
 
     last_comma  = cleaned.rfind(",")
     last_period = cleaned.rfind(".")
@@ -132,72 +136,122 @@ def write_best_score(score: float):
 # ---------------------------------------------------------------------------
 # Source 1 – RABE-Bike.de  /en/sale
 #
-# FIX 1: resp.encoding = 'utf-8'  → clean Unicode titles
-# FIX 2: new extract_price()      → 2,799.00 → 2799.0
-# Motor/battery from <p> description block inside each card
+# Extracts product data from <script> tags (window.__INITIAL_STATE__) on each
+# product detail page — NOT from CSS selectors.
+#
+# Phase 1: listing pages → collect unique product URLs via <a href> links.
+# Phase 2: product pages → parse __INITIAL_STATE__ → state.product.current
+#          which has clean name, price (net), and full HTML description
+#          containing motor + battery specs.
+#
+# Price is net (excl. VAT). Multiplied by 1.19 for German VAT.
 # ---------------------------------------------------------------------------
 
-def scrape_rabe(pages: int = 4) -> list:
-    results = []
-    base = "https://www.rabe-bike.de"
+RABE_VAT = 1.19  # German 19% VAT
 
+def _rabe_product_urls(pages: int) -> list:
+    """Phase 1: collect unique product URLs from listing pages."""
+    base = "https://www.rabe-bike.de"
+    seen = set()
+    urls = []
     for page in range(1, pages + 1):
         url = f"{base}/en/sale" if page == 1 else f"{base}/en/sale?page={page}"
         try:
             resp = SESSION.get(url, timeout=20)
             resp.raise_for_status()
-            resp.encoding = "utf-8"                  # FIX 1
+            resp.encoding = "utf-8"
         except requests.RequestException as exc:
-            print(f"[RABE] p{page} error: {exc}")
+            print(f"[RABE] listing p{page} error: {exc}")
             break
-
         soup = BeautifulSoup(resp.text, "html.parser")
-        cards = soup.select(".product-link")
-        if not cards:
-            print(f"[RABE] p{page}: no cards, stopping.")
+        found = 0
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if href.startswith("/en/") and "childsku=" in href:
+                slug = href.split("?")[0]
+                if slug not in seen:
+                    seen.add(slug)
+                    urls.append(slug)
+                    found += 1
+        if found == 0:
+            print(f"[RABE] listing p{page}: no product links, stopping.")
             break
+        print(f"[RABE] listing p{page}: {found} new product URLs")
+        time.sleep(1.0)
+    return urls
 
-        kept = 0
-        for card in cards:
-            title_el = card.select_one("[id^='title-']")
-            price_el = card.select_one("[id^='price-']")
-            link_el  = card.select_one("a[href]")
-            desc_el  = card.select_one("[class*='text-xxs'] p") or card.find("p")
 
-            title       = title_el.get_text(strip=True) if title_el else ""
-            price_text  = price_el.get_text(strip=True) if price_el else ""
-            href        = link_el["href"] if link_el and link_el.has_attr("href") else ""
-            description = desc_el.get_text(strip=True) if desc_el else ""
+def _rabe_extract_product(html: str, base: str, slug: str) -> dict:
+    """Phase 2: parse __INITIAL_STATE__ from a product page's <script> tag."""
+    soup = BeautifulSoup(html, "html.parser")
+    for sc in soup.find_all("script"):
+        raw = sc.string or ""
+        if not raw.startswith("window.__INITIAL_STATE__"):
+            continue
+        state, _ = json.JSONDecoder().raw_decode(
+            raw[len("window.__INITIAL_STATE__="):]
+        )
+        current = state.get("product", {}).get("current", {})
+        if not current or not current.get("name"):
+            return {}
 
-            if not title:
-                continue
+        name = current["name"]
 
-            price = extract_price(price_text)          # FIX 2
-            if price is None or price > MAX_PRICE:
-                continue
+        # Price: use special_price (sale) or final_price or price; all are net
+        price_net = (
+            current.get("special_price")
+            or current.get("final_price")
+            or current.get("price")
+        )
+        if price_net is None:
+            return {}
+        price = round(float(price_net) * RABE_VAT, 2)
 
-            full_text  = f"{title} {description}"
-            motor      = detect_motor(full_text)
-            battery_wh = extract_battery_wh(full_text)
-            full_url   = base + href if href.startswith("/") else href
+        # Description is HTML — strip tags for text search
+        desc_html = current.get("description", "")
+        desc_soup = BeautifulSoup(desc_html, "html.parser")
+        description = desc_soup.get_text(separator=" ", strip=True)
 
-            results.append({
-                "source":      "RABE",
-                "title":       title,
-                "price":       price,
-                "motor":       motor,
-                "battery_wh":  battery_wh,
-                "condition":   "refurbished",
-                "location":    "DE",
-                "url":         full_url,
-                "description": description[:250],
-            })
-            kept += 1
+        full_text  = f"{name} {description}"
+        motor      = detect_motor(full_text)
+        battery_wh = extract_battery_wh(full_text)
 
-        print(f"[RABE] p{page}: {len(cards)} cards, {kept} kept ≤ €{MAX_PRICE:.0f}")
-        time.sleep(1.5)
+        return {
+            "source":      "RABE",
+            "title":       name,
+            "price":       price,
+            "motor":       motor,
+            "battery_wh":  battery_wh,
+            "condition":   "refurbished",
+            "location":    "DE",
+            "url":         f"{base}{slug}",
+            "description": description[:250],
+        }
+    return {}
 
-    print(f"[RABE] total: {len(results)}")
+
+def scrape_rabe(pages: int = 4) -> list:
+    base = "https://www.rabe-bike.de"
+    slugs = _rabe_product_urls(pages)
+    print(f"[RABE] fetching {len(slugs)} product pages...")
+
+    results = []
+    for slug in slugs:
+        try:
+            resp = SESSION.get(f"{base}{slug}", timeout=20)
+            resp.raise_for_status()
+            resp.encoding = "utf-8"
+        except requests.RequestException as exc:
+            print(f"[RABE] {slug[:40]} error: {exc}")
+            continue
+
+        item = _rabe_extract_product(resp.text, base, slug)
+        if item and item.get("price") and item["price"] <= MAX_PRICE:
+            results.append(item)
+
+        time.sleep(1.0)
+
+    print(f"[RABE] total: {len(results)} kept ≤ €{MAX_PRICE:.0f}")
     return results
 
 
@@ -288,22 +342,22 @@ def scrape_airtracks(pages: int = 3) -> list:
 
 
 # ---------------------------------------------------------------------------
-# Source 3 – Kleinanzeigen.de  Offers only
+# Source 3 – Kleinanzeigen.de  Bicycles category (c214)
 #
-# FIX 3: /s-anzeige:angebote/e-bike-bosch/k0
-#   Strictly returns OFFER ads — zero "Suche" (wanted) listings.
-#   Confirmed via live probe: 27 real e-bike offers, 0 wanted ads.
+# URL: /s-fahrraeder/e-bike-bosch/k0c214
+#   c214 = Fahrräder (Bicycles) category — no car doors, printers, or junk.
+#   Previous URL /s-anzeige:angebote/... was invalid and returned noise.
 # ---------------------------------------------------------------------------
 
-def scrape_kleinanzeigen(max_price: int = 1500, pages: int = 3) -> list:
+def scrape_kleinanzeigen(max_price: int = 2500, pages: int = 3) -> list:
     results = []
     base = "https://www.kleinanzeigen.de"
 
     for page in range(1, pages + 1):
         if page == 1:
-            url = f"{base}/s-anzeige:angebote/e-bike-bosch/k0"
+            url = f"{base}/s-fahrraeder/e-bike-bosch/k0c214"
         else:
-            url = f"{base}/s-anzeige:angebote/e-bike-bosch/seite:{page}/k0"
+            url = f"{base}/s-fahrraeder/e-bike-bosch/seite:{page}/k0c214"
         params = {"maxPrice": max_price}
 
         try:
@@ -448,7 +502,7 @@ def main():
     deals: list = []
     deals.extend(scrape_rabe(pages=4))
     deals.extend(scrape_airtracks(pages=3))
-    deals.extend(scrape_kleinanzeigen(max_price=1500, pages=3))
+    deals.extend(scrape_kleinanzeigen(max_price=2500, pages=3))
 
     # Deduplicate by URL; drop items without a price (prevents float(None) crash)
     seen, unique = set(), []
